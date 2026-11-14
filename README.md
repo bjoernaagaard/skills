@@ -55,7 +55,6 @@ When `ship` rebases again after a rejected push, it reruns the tests only if a c
 |---|---|
 | `honest-performance` | It measures, profiles, and speeds up software, and it checks claims about speed. |
 | `model-router` | It decides whether to hand work to a second agent, and which model and effort level the agent gets. |
-| `python` | It starts, updates, reviews, and debugs Python projects. |
 | `simplify-change` | It removes code that a change does not need, and it keeps the required behavior. |
 
 ## How a skill is stored
