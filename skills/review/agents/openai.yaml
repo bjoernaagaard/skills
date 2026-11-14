@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review"
+  short_description: "Get a subagent review of the current changes"
+  default_prompt: "Use $review to have a subagent review my current changes."
