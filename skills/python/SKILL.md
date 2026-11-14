@@ -24,8 +24,9 @@ For new code and examples:
 - Validate external data at its boundary with a named model and the declared
   schema decoder. Fix internal types at creation or with ordinary narrowing;
   do not use `typing.cast`.
-- Use normal imports, public names, and explicit `if` checks with `raise`.
-  Write no code comments and keep useful docstrings to one line.
+- Use normal imports, explicit `if` checks with `raise`, and public module
+  level names with the API listed in `__all__`. Comment only a reason the code
+  cannot show, and keep useful docstrings to one line.
 - Use a concrete class or callable until another real implementation exists
   and project policy allows an interface.
 - Keep the project's dependency workflow, checker, and linter configuration.

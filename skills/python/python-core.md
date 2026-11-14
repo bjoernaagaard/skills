@@ -54,15 +54,16 @@ style is not itself a bug.
   `raise` with a clear message. Do not use `assert` for that check in source
   code, because an optimized run can remove the check. An `assert` in an end to
   end test states the expected result of that test, and that use stays in tests.
-- Use public names in new code. Do not start a new name with an underscore,
-  apart from `_` for a value the code does not use and apart from receiver names
-  that Python itself defines, such as `__init__`.
-- Write no code comments in new code. Give the fact to a clear name, to a one
-  line docstring, to an error message, or to the name of the end to end case
-  that covers the behavior. Add a docstring only when it states something the
-  name and the types do not already state, and keep a written docstring to one
-  line. A checker suppression may appear only in the narrow form the project
-  permits, and it carries no extra reason text.
+- Use public names for the functions, classes and constants of a module. Do not
+  start a new module level name with an underscore. List the names that callers
+  may import in `__all__`, which marks the API without an underscore on the
+  rest. A method that only its own class calls may start with one underscore.
+- Write a comment only for a reason the code cannot show, such as a limit an
+  outside service sets or the reason an obvious shorter form is wrong. Do not
+  write a comment that says what the code does. Add a docstring only when it
+  states something the name and the types do not already state, and keep a
+  written docstring to one line. A checker suppression may appear only in the
+  narrow form the project permits, and it carries no extra reason text.
 - Start with a concrete class or a plain callable for one implementation. Do
   not introduce a `Protocol` or an abstract base class for a second
   implementation that does not exist yet.
