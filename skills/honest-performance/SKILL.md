@@ -48,9 +48,7 @@ alone does not establish a cause. Label hypotheses, estimates, and bounds.
 
 Read [measurement and evidence](references/MEASUREMENT.md) before running or
 changing benchmarks, or when auditing measurement validity. For a source-only
-design review, load it only if a measurement question requires it. The reference
-covers comparable workloads, actual loaded code identity in every measurement
-process, timing boundaries, uncertainty, and reproducible evidence.
+design review, load it only if a measurement question requires it.
 
 ## Retain changes and report
 

@@ -1,3 +1,4 @@
 interface:
   display_name: "Simplify Change"
   short_description: "Remove over-design without changing behavior"
+  default_prompt: "Use $simplify-change to simplify this change while preserving required behavior."

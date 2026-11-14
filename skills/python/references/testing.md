@@ -5,12 +5,16 @@ the behavior a user can observe before you change the implementation, a
 dependency, or an expected result. Separate a regression from an environment
 problem and from a request the code never promised to support.
 
-## Write the case before the code
+## Choose the authorized verification
 
-First, read the relevant caller, the public promise, and the nearest existing
-tests. Second, write the end to end case that covers the change, and run it so
-you can see it fail for the reason you expect. Third, write the code, and run
-the same case again so you can see it pass.
+Run the real app or command to verify a change. Write a new end to end test only
+when the user requests one. Never write unit tests, integration tests, or tests
+that use mocks. The guidance below applies to authorized end to end tests and
+existing tests.
+
+Read the relevant caller, public promise, and nearest existing tests. When a new
+end to end test is requested, run the case before the fix to confirm the failure,
+then run the same case after the fix.
 
 Take the expected value from outside the code you are checking. Use the real
 source the code will read in normal use, or use a contract that a published

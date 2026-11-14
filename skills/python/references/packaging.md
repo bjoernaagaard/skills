@@ -21,9 +21,9 @@ when an import or distribution boundary needs it, and an entry point when a
 command needs it. Avoid speculative interfaces, packages, helper scripts, and
 maintenance documents.
 
-Write the first real end to end case before its feature implementation. Choose
-and configure the checks needed for the project using each tool's native
-configuration; keep those choices while they serve the project.
+Verify the first feature through the real app or command. Follow the test
+authorization rules in [testing](testing.md) before adding a test. Keep the
+project's existing check configuration while it serves the project.
 
 ## Identify the environment and artifact
 

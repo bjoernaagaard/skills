@@ -26,8 +26,8 @@ knowledge of benchmark fixtures.
 Before comparative timing, verify from inside each measurement process,
 including workers and subprocesses, that the loaded implementation matches the
 intended baseline or candidate. Record resolved module or executable paths and
-source or binary hashes, or equivalent verifiable artifact identity, against the
-preserved code state.
+compare the loaded source or binary with the preserved artifact using `cmp` or
+`diff`. Do not add hash checks unless the user requests them.
 
 Directory names, revision labels, package versions, and requested import paths
 alone are insufficient. Editable installs, import hooks, caches, and stale builds

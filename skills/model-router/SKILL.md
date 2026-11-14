@@ -28,7 +28,3 @@ Delegate work that splits into independent pieces whose results come back as a s
 ## Routes
 
 - **Second review from another family.** When a missed error is costly, add one reviewer from a different family at Main or Top, in a fresh session that has not seen the first review.
-
-## Look up the rest
-
-- Claude prices and the source of the tiers → [references/claude.md](references/claude.md)

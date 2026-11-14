@@ -1,9 +1,4 @@
 interface:
   display_name: "Honest Performance"
   short_description: "Benchmark and optimize with credible evidence"
-  default_prompt: "Benchmark or optimize this work using credible comparisons, preserved correctness, and reproducible evidence."
-policy:
-  products:
-    - CHAT
-    - CODEX
-  allow_implicit_invocation: true
+  default_prompt: "Use $honest-performance to benchmark or optimize this work with credible evidence."

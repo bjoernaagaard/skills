@@ -18,8 +18,8 @@ class Box[T = int]:
 ```
 
 The default supplies `int` when a type argument is omitted and cannot otherwise
-be inferred. Explicit specialization, such as `Box[str]("value")`, remains
-available; constructor arguments can also drive inference. A type parameter
+be inferred. Explicit specialization with `Box[str]` remains available;
+constructor arguments can also drive inference. A type parameter
 default is not a default constructor value: `Box()` still lacks required `value`.
 It neither converts inputs to `int` nor checks them at runtime.
 

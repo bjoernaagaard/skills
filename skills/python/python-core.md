@@ -3,7 +3,8 @@
 <!-- Modified derivative; see SKILL.md for attribution. -->
 
 Apply this guidance within the project's supported Python versions and existing
-contracts. An unfamiliar style is not itself a bug.
+contracts. Existing code conventions override the defaults below. An unfamiliar
+style is not itself a bug.
 
 ## Contracts and input boundaries
 

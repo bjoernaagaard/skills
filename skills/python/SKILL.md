@@ -10,16 +10,17 @@ description: >-
 This is a modified derivative of [Dagster's Dignified Python](https://github.com/dagster-io/skills), copyright 2025 Dagster Labs, Inc., distributed under the [Apache License 2.0](LICENSE). The local version changes the defaults and reference guidance.
 
 Preserve the requested behavior, public API, and supported Python versions. Follow
-explicit user and project requirements over this skill's defaults. Resolve bundled
+explicit user and project requirements and existing code conventions over this
+skill's defaults. Resolve bundled
 paths relative to this directory and use the host's available tools.
 
 ## Defaults
 
 For new code and examples:
 
-- Write the real end to end case before implementation. Use source data or an
-  external contract and disposable resources, without mocks or fakes. Keep a
-  repeatable run artifact.
+- Verify changes by running the real app or command with real data. Write new
+  end to end tests only when requested, and retain a repeatable artifact. Do not
+  write unit tests, integration tests, or tests that use mocks.
 - Validate external data at its boundary with a named model and the declared
   schema decoder. Fix internal types at creation or with ordinary narrowing;
   do not use `typing.cast`.
@@ -41,12 +42,7 @@ that does not depend on the version, and ask only when a missing choice blocks a
 correct change. A version guard cannot hide syntax that an older interpreter
 must still parse when it loads the module.
 
-For a new application, prefer a current maintained stable Python release that
-its dependencies and deployment target support. For a library, choose the
-consumer versions it will support deliberately. Declare the resulting range
-in `pyproject.toml`. Check current official Python and dependency guidance;
-the bundled release notes neither cap nor choose the version. See
-[Packaging](references/packaging.md) for setup and first-feature decisions.
+For new projects and version selection, read [Packaging](references/packaging.md).
 
 ## Select the relevant guidance
 
