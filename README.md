@@ -53,6 +53,7 @@ When `ship` rebases again after a rejected push, it reruns the tests only if a c
 
 | Skill | What the skill does |
 |---|---|
+| `ast-grep-callchain-audit` | It traces definitions, callers, and imports with ast-grep, so a review rests on the code structure. |
 | `honest-performance` | It measures, profiles, and speeds up software, and it checks claims about speed. |
 | `model-router` | It decides whether to hand work to a second agent, and which model and effort level the agent gets. |
 | `python` | It starts, updates, reviews, and debugs Python projects. |
