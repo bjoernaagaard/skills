@@ -1,0 +1,4 @@
+interface:
+  display_name: "Python"
+  short_description: "Write, review, and refactor Python with verified contracts"
+  default_prompt: "Use $python to write, review, or refactor Python while preserving project contracts and verifying the requested changes."
