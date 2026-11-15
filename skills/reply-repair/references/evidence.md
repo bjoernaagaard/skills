@@ -6,13 +6,13 @@ Read the file before you edit the skill, so that a change keeps what was tested.
 
 The rules come from turns in the owner's own sessions where a reply failed. In October and November 2026, 15 of 523 follow-up turns were a complaint such as "TLDR", "I'm so confused", "what do I do", or a question asked for the fourth time. Each rule under "When the last reply failed" answers one of those complaints.
 
-No study tests reply format for agent output with readers who have ADHD. The rules rest on three findings about ADHD itself, so they are inferences.
+No study tests reply format for agent output. The rules rest on three findings about reading, working memory and attention, so they are inferences.
 
 | Rule | Finding it rests on |
 |---|---|
-| Keep each fact in the reply | Extra working memory load lowers reading comprehension more in ADHD (Kofler 2018 and 2020, children) |
-| Labelled closing lines, answer first | Guidance during reading closed the comprehension gap in adults with ADHD (Brann and Sidi 2024) |
-| Short, one topic | Dull or long text raises mind wandering in ADHD, and mind wandering lowers comprehension (Brann and Sidi 2024) |
+| Keep each fact in the reply | Extra working memory load lowers reading comprehension (Kofler 2018 and 2020, children) |
+| Labelled closing lines, answer first | Guidance during reading closed a comprehension gap in adult readers (Brann and Sidi 2024) |
+| Short, one topic | Dull or long text raises mind wandering, and mind wandering lowers comprehension (Brann and Sidi 2024) |
 | Do the step, hand over one step | Barkley's "point of performance" account, which is supported for groups and not for each person |
 
 ## What the tests showed
@@ -22,7 +22,7 @@ The tests replayed ten failed turns in fresh sessions, and a judge model from an
 | Rules loaded | Replies that fixed the complaint, of 40 |
 |---|---|
 | none | 18 |
-| a list of ten general ADHD rules from another skill | 18 |
+| a list of ten general rules from another skill | 18 |
 | the skill alone | 26 |
 | the skill with the owner's global instructions | 26 |
 

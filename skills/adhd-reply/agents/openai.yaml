@@ -1,4 +1,0 @@
-interface:
-  display_name: "ADHD Reply"
-  short_description: "Short, concrete replies that end with what is open and what to do"
-  default_prompt: "Use $adhd-reply to shape replies for a reader with ADHD."

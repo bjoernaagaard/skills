@@ -45,7 +45,7 @@ When `ship` rebases again after a rejected push, it reruns the tests only if a c
 
 | Skill | What the skill does |
 |---|---|
-| `adhd-reply` | It shapes replies for a reader with ADHD, and it repairs a reply the reader could not use. |
+| `reply-repair` | It shapes replies so the reader can act on them, and it repairs a reply the reader could not use. |
 | `bluf` | It starts a status update or report with what the reader must do or decide. |
 | `sbar` | It writes a handover as Situation, Background, Assessment, and Recommendation. |
 | `scholarly-paper-revision` | It revises LaTeX papers for correct math, clear explanations, and consistent notation. |

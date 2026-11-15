@@ -1,11 +1,11 @@
 ---
-name: adhd-reply
-description: Shape replies for a reader with ADHD, and repair a reply the reader could not use. Use when the user says TLDR, says they are confused or that it is too much, repeats a question, asks "what do I do", asks whether anything is left, or types /adhd-reply. Stays on for the rest of the session.
+name: reply-repair
+description: Shape replies so the reader can act on them, and repair a reply the reader could not use. Use when the user says TLDR, says they are confused or that it is too much, repeats a question, asks "what do I do", asks whether anything is left, or types /reply-repair. Stays on for the rest of the session.
 ---
 
-# Replies for a reader with ADHD
+# Replies the reader can act on
 
-The reader has ADHD. They lose a fact that is not on the screen, starting a task costs them the most, and long text makes their attention drift. Apply the rules below to each reply for the rest of the session. The session's own instructions may already hold some of the rules, and then the two agree.
+The reader loses a fact that is not on the screen, starting a task costs them the most, and long text makes their attention drift. Apply the rules below to each reply for the rest of the session. The session's own instructions may already hold some of the rules, and then the two agree.
 
 ## Every reply
 
