@@ -1,0 +1,19 @@
+{
+  "name": "emphasis",
+  "version": "0.1.0",
+  "description": "Draws [[Word]] status pills, label icons and colored bold in terminal replies, and tells the model how to write them.",
+  "userConfig": {
+    "icons": {
+      "type": "boolean",
+      "title": "Icons",
+      "description": "Draw an icon before known pill words, labels and headings.",
+      "default": true
+    },
+    "roundEnds": {
+      "type": "boolean",
+      "title": "Rounded pill ends",
+      "description": "Draw pills with rounded Nerd Font end caps. Off draws square chips.",
+      "default": true
+    }
+  }
+}

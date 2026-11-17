@@ -119,3 +119,19 @@ npx skills add bjoernaagaard/skills --skill emphasis
 Invoke the skill with `$emphasis` in Codex or `/emphasis` in Claude Code.
 Both forms use ordinary Markdown badges, which remain in copied text.
 Neither form changes the application's colors or draws rounded pills.
+
+## Mods for Claude Code
+
+A mod changes how Claude Code itself behaves, and Claude Code loads it from a folder.
+
+| Mod | What the mod does |
+|---|---|
+| `emphasis` | It draws `[[Done]]` and other status words as colored pills in the terminal, adds icons to known labels, colors bold text, and teaches the agent the words. The stored reply keeps its Markdown. |
+
+Load the mod by adding its folder to `CLAUDE_CODE_PLUGIN_DIRS` in the `env` block of `~/.claude/settings.json`:
+
+```json
+{ "env": { "CLAUDE_CODE_PLUGIN_DIRS": "~/src/skills/mods/emphasis" } }
+```
+
+The icons and the rounded pill ends need a terminal that draws [Nerd Font](https://www.nerdfonts.com/) symbols, and the mod's two settings turn each of them off. On a machine where mods are blocked, the `emphasis` skill gives the same words as plain bold badges.

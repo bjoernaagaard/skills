@@ -15,11 +15,12 @@ Use exactly these words, so the same state always reads the same. Do not invent 
 
 | Meaning | Words |
 |---|---|
-| Something is wrong | Failed, Blocked, Broken, Unsafe |
-| Look here | Needs you, Decision, Unverified, Partial, Skipped, In progress, Pending, At risk |
-| Settled | Done, Passed, Observed, Fixed, Live, Verified, Merged |
+| Something is wrong | Failed, Broken, Unsafe, Rejected, Down |
+| Look here | Needs you, Decision, Unverified, Skipped, Pending, Review, Stale, Draft |
+| Settled | Done, Passed, Fixed, Live, Keep, Ready, Merged, Safe, Verified, Shipped, Approved |
 | Consequence | Costs money, Destructive, Irreversible |
-| Context | Inferred, New, Changed, Optional, Recommended |
+| Ownership | Shared |
+| Context | New, Changed, Inferred |
 
 A known word may carry short detail that real output supports, such as **[Passed 12 of 12]** or **[Failed: 3 tests]**. Keep a badge under 33 characters.
 
@@ -37,18 +38,18 @@ Follow each badge for a problem or an ask with the one fact the reader needs, in
 
 | Badge | What follows it |
 |---|---|
-| **[Done]**, **[Fixed]**, **[Live]** | **See:** the address, file, or command that shows it |
-| **[Passed]**, **[Observed]** | the output or count that supports it |
+| **[Done]**, **[Fixed]**, **[Live]**, **[Shipped]** | **See:** the address, file, or command that shows it |
+| **[Passed]**, **[Verified]** | the output or count that supports it |
 | **[Unverified]** | **Check:** the fastest check and who can run it. Run the check yourself when you can, and report the result instead. |
 | **[Needs you]** | **Do:** the exact action and what it unblocks. Use it only for a step the user alone can take. |
 | **[Decision]** | the options, your pick, and **Next:** what you do meanwhile |
-| **[Failed]**, **[Broken]** | the cause, and **Next:** what you are doing about it |
-| **[Blocked]** | **Unblock:** the smallest thing that unblocks it |
-| **[Partial]**, **[In progress]** | **Left:** what remains |
+| **[Failed]**, **[Broken]**, **[Down]** | the cause, and **Next:** what you are doing about it |
+| **[Pending]**, **[Draft]** | **Left:** what remains |
 | **[Skipped]** | why, and **Run:** how to run it anyway |
-| **[At risk]**, **[Unsafe]** | what would make it fail, and **Guard:** the protection against it |
+| **[Unsafe]** | what would make it fail, and **Guard:** the protection against it |
 | **[Costs money]** | the amount, before acting |
 | **[Destructive]**, **[Irreversible]** | what is lost, and **Undo:** how to get it back, or that nothing can |
+| **[Shared]** | who else the change affects |
 | **[Inferred]** | what it was inferred from |
 
 ## What to leave out
