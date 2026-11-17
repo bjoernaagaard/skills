@@ -1,0 +1,5 @@
+{
+  "name": "bjoernaagaard-skills",
+  "owner": { "name": "Bjørn Aagaard" },
+  "plugins": [{ "name": "handoff-gate", "source": "./plugins/handoff-gate" }]
+}

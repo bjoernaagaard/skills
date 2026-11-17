@@ -59,6 +59,7 @@ When `ship` rebases again after a rejected push, it reruns the tests only if a c
 | `verify-change` | It proves a change by running it, chooses a test that is hard to fool, and keeps tests and checks honest. |
 | `deliver` | It writes down what done means before the work, proves each part with a check, and has a model from the other family grade the result. |
 | `model-router` | It decides whether to hand work to a second agent, and which model and effort level the agent gets. |
+| `no-handoff` | It takes every step it can before a reply ends, and it hands you only a step that needs your hands, your money, a credential or a release. |
 | `simplify-change` | It removes code that a change does not need, and it keeps the required behavior. |
 
 ## How a skill is stored
@@ -76,3 +77,17 @@ skills/
 ## License
 
 The skills use the MIT license, and the [LICENSE](LICENSE) file holds the full text.
+
+## The handoff-gate mod
+
+`handoff-gate` is a Claude Code mod that enforces the `no-handoff` skill. It reads the last reply of a turn, and when the reply hands you a command or asks for a go-ahead that the agent could take itself, it sends the agent back to work once.
+
+```text
+/plugin install handoff-gate --marketplace bjoernaagaard/skills
+```
+
+The mod is a hooks module, so it does not load where an administrator has turned hooks off. Install the skill there instead, which needs no hook:
+
+```bash
+npx skills add bjoernaagaard/skills --skill no-handoff
+```
