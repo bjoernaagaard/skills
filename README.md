@@ -91,3 +91,31 @@ The mod is a hooks module, so it does not load where an administrator has turned
 ```bash
 npx skills add bjoernaagaard/skills --skill no-handoff
 ```
+
+## The Codex Emphasis plugin
+
+`codex-emphasis` loads the `emphasis` skill automatically when a Codex session
+starts, resumes, forks, clears, or compacts. The package contains no personal
+paths, machine settings, credentials, or account connections. Its hook runs
+`cat` to read the bundled skill and requires a shell with that command.
+
+Install it on another computer with Codex installed:
+
+```sh
+codex plugin marketplace add bjoernaagaard/skills
+codex plugin add codex-emphasis@skills-codex
+```
+
+Review the Codex Emphasis hook in `/hooks`, then start a new session. The
+supported `.codex-plugin/plugin.json` manifest allows Codex 0.169.0 to discover
+the hook. The bundled skill matches `skills/emphasis/SKILL.md`.
+
+When work policy blocks hooks or plugins, install the skill alone:
+
+```sh
+npx skills add bjoernaagaard/skills --skill emphasis
+```
+
+Invoke the skill with `$emphasis` in Codex or `/emphasis` in Claude Code.
+Both forms use ordinary Markdown badges, which remain in copied text.
+Neither form changes the application's colors or draws rounded pills.

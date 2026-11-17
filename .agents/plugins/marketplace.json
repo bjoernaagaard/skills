@@ -1,0 +1,20 @@
+{
+  "name": "skills-codex",
+  "interface": {
+    "displayName": "Skills for Codex"
+  },
+  "plugins": [
+    {
+      "name": "codex-emphasis",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-emphasis"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
