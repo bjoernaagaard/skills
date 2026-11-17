@@ -78,19 +78,29 @@ skills/
 
 The skills use the MIT license, and the [LICENSE](LICENSE) file holds the full text.
 
-## The handoff-gate mod
+## Mods for Claude Code
 
-`handoff-gate` is a Claude Code mod that enforces the `no-handoff` skill. It reads the last reply of a turn, and when the reply hands you a command or asks for a go-ahead that the agent could take itself, it sends the agent back to work once.
+A mod changes how Claude Code itself behaves. The repository is a plugin marketplace that holds both mods, so one command installs each of them.
+
+| Mod | What the mod does | The skill for a machine that blocks mods |
+|---|---|---|
+| `handoff-gate` | It reads the last reply of a turn, and when the reply hands you a command or asks for a go-ahead that the agent could take itself, it sends the agent back to work once. | `no-handoff` |
+| `emphasis` | It draws `[[Done]]` and other status words as colored pills in the terminal, adds icons to known labels, colors bold text, and teaches the agent the words. The stored reply keeps its Markdown. | `emphasis` |
+
+Run the two commands inside Claude Code:
 
 ```text
 /plugin install handoff-gate --marketplace bjoernaagaard/skills
+/plugin install emphasis --marketplace bjoernaagaard/skills
 ```
 
-The mod is a hooks module, so it does not load where an administrator has turned hooks off. Install the skill there instead, which needs no hook:
+A mod is a hooks module, so it does not load where an administrator has turned hooks off. Install the two skills there instead, which need no hook:
 
 ```bash
-npx skills add bjoernaagaard/skills --skill no-handoff
+npx skills add bjoernaagaard/skills --skill no-handoff --skill emphasis
 ```
+
+The icons and the rounded pill ends of `emphasis` need a terminal that draws [Nerd Font](https://www.nerdfonts.com/) symbols, and the mod's two settings turn each of them off.
 
 ## The Codex Emphasis plugin
 
@@ -119,19 +129,3 @@ npx skills add bjoernaagaard/skills --skill emphasis
 Invoke the skill with `$emphasis` in Codex or `/emphasis` in Claude Code.
 Both forms use ordinary Markdown badges, which remain in copied text.
 Neither form changes the application's colors or draws rounded pills.
-
-## Mods for Claude Code
-
-A mod changes how Claude Code itself behaves, and Claude Code loads it from a folder.
-
-| Mod | What the mod does |
-|---|---|
-| `emphasis` | It draws `[[Done]]` and other status words as colored pills in the terminal, adds icons to known labels, colors bold text, and teaches the agent the words. The stored reply keeps its Markdown. |
-
-Load the mod by adding its folder to `CLAUDE_CODE_PLUGIN_DIRS` in the `env` block of `~/.claude/settings.json`:
-
-```json
-{ "env": { "CLAUDE_CODE_PLUGIN_DIRS": "~/src/skills/mods/emphasis" } }
-```
-
-The icons and the rounded pill ends need a terminal that draws [Nerd Font](https://www.nerdfonts.com/) symbols, and the mod's two settings turn each of them off. On a machine where mods are blocked, the `emphasis` skill gives the same words as plain bold badges.
