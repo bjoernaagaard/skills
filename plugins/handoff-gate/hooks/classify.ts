@@ -14,7 +14,7 @@ export type Verdict = {
   line: string
 }
 
-const CLOSING = /^\**(you do|next step|action needed|your turn|to do):?\**:?\s*(.+)$/im
+const CLOSING = /^\**(you do|next step|action needed|your turn|to do|next(?=\**:)):?\**:?\s*(.+)$/im
 const NOTHING = /^[*"'`]*(nothing|none|n\/a)\b/i
 const OFFER =
   /[^.\n]*\b(should I\b|shall I\b|want me to\b|would you like me to\b|let me know (if|when|whether)\b|say (yes|go|the word)\b|you('ll| will) need to run\b|please run\b|you can run\b)[^.\n?]*[.?]?/i
