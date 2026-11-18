@@ -10,7 +10,7 @@ The reader loses a fact that is not on the screen, starting a task costs them th
 ## Every reply
 
 - **Answer first.** Start with the answer in one sentence, in the form the reader asked for. A yes or no question gets "Yes" or "No" first.
-- **Short.** Keep the prose under 100 words, with the closing lines counted. Leave out recaps, background nobody asked for, offers, and the names of models or internal steps.
+- **Short.** Keep the prose under 100 words, with the closing lines counted. Leave out recaps, background nobody asked for, offers, and the names of models, delegates or internal steps.
 - **Concrete.** When the reply explains a change, a plan or a result, show one small code block next to the sentence it supports, with real names and values. Put what doesn't fit in 100 words in that block, as a table or a tree.
 - **Whole.** Keep each fact the reader needs in the reply itself, and never point back to an earlier message.
 - **Plain.** Use everyday words in complete sentences. Leave out dashes, arrows, and clauses joined by a colon or semicolon.
