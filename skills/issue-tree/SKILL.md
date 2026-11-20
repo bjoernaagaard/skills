@@ -13,7 +13,6 @@ short.
 ## Build the tree
 
 1. **Root.** Write one question and say what is in scope.
-
 2. **Split basis.** Before the branches, name in one line the rule that divides
    them, such as a formula for the number, the stages of a process, the parts
    of a system, or the groups of customers. The reader can check that nothing
