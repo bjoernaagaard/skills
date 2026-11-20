@@ -1,0 +1,4 @@
+interface:
+  display_name: "Issue Tree"
+  short_description: "Split a question into causes, parts or options"
+  default_prompt: "Use $issue-tree to split this question into a tree and audit it for gaps and overlaps."

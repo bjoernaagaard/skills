@@ -56,6 +56,7 @@ When `ship` rebases again after a rejected push, it reruns the tests only if a c
 | Skill | What the skill does |
 |---|---|
 | `honest-performance` | It measures, profiles, and speeds up software, and it checks claims about speed. |
+| `issue-tree` | It splits a why, what, or how question into a tree of causes, parts, or options, and it checks the tree for gaps and overlaps. |
 | `verify-change` | It proves a change by running it, chooses a test that is hard to fool, and keeps tests and checks honest. |
 | `deliver` | It writes down what done means before the work, proves each part with a check, and has a model from the other family grade the result. |
 | `model-router` | It decides whether to hand work to a second agent, and which model and effort level the agent gets. |
