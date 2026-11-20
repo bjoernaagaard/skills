@@ -12,26 +12,16 @@ short.
 
 ## Build the tree
 
-1. **Root.** Write one question and say what is in scope. The kind of question
-   decides what a leaf is.
-
-   | Question | A leaf is |
-   | --- | --- |
-   | Why does this happen? | A candidate cause with the check that would confirm or rule it out |
-   | What does this require? | A part or a unit of work with its result |
-   | How could this be reached? | An option with how it works and what it costs |
+1. **Root.** Write one question and say what is in scope.
 
 2. **Split basis.** Before the branches, name in one line the rule that divides
    them, such as a formula for the number, the stages of a process, the parts
    of a system, or the groups of customers. The reader can check that nothing
    is missing only when they know the rule.
-3. **Branches.** Keep the branches under one parent at the same level, each
-   answering that parent. Stop at the level where one more split would not
-   change a check, a decision or an action.
-4. **Evidence.** Mark each leaf as a fact, as inferred, or as unknown. A tidy
+3. **Evidence.** Mark each leaf as a fact, as inferred, or as unknown. A tidy
    tree is not evidence, and the reader should see which leaves are only
    guesses. In a repository, a fact is something you read or ran.
-5. **Audit.** After the tree, name one gap you looked for and one overlap you
+4. **Audit.** After the tree, name one gap you looked for and one overlap you
    looked for, and say what you did about each. Causes and options often
    affect each other, so name those links and keep them. The reader can trust
    the coverage only when they see what was challenged.
