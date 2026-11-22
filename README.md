@@ -1,6 +1,6 @@
 # Agent skills
 
-I use these skills in Claude Code and Codex to work with Git, check code changes, and write clear replies.
+I use these skills in Antigravity, Claude Code and Codex to work with Git, check code changes, and write clear replies.
 
 Use [$bmode](skills/bmode/SKILL.md) to apply the working conventions without hooks. Install it with no-handoff, emphasis, deliver, model-router, and ship.
 
@@ -49,6 +49,16 @@ npx skills add bjoernaagaard/skills
 ```
 
 If you select individual skills, install `rebase` with `ship`. To use a skill, type its name, such as `$bluf` in Codex or `/bluf` in Claude Code.
+
+Antigravity loads the skills when you open this repository. To use them in
+other projects, install them for your account:
+
+```bash
+npx skills add bjoernaagaard/skills --global --agent antigravity --skill '*' --yes
+```
+
+In an open Antigravity CLI session, run `/skills reload`, then type `/bmode`
+or another skill name.
 
 ## Install an optional plugin
 
