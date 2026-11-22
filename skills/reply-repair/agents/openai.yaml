@@ -1,4 +1,4 @@
 interface:
   display_name: "Reply Repair"
-  short_description: "Short, concrete replies that end with what is open and what to do"
+  short_description: "Write short replies that say what is open and what to do"
   default_prompt: "Use $reply-repair to shape replies the reader can act on."
