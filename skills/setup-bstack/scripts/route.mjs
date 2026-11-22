@@ -79,9 +79,12 @@ function failedQuota(attempt, entries) {
     throw new Error("Retry requires a failed T3 child with no pending runs and its own activity.");
   }
 
-  const quotaError = activity.items.some(({ type, text, runId }) =>
-    type === "error" && runId === run && typeof text === "string" &&
-    /subscription quota exhausted|usage limit (?:reached|exceeded)|usage window resets|you(?:'ve| have) hit your usage limit|reached your (?:[\w-]+ )?usage limit/i.test(text),
+  const quotaError = activity.items.some(({ type, title, text, runId }) =>
+    type === "error" && runId === run && (
+      title === "Usage limit reached" ||
+      (typeof text === "string" &&
+        /subscription quota exhausted|usage limit (?:reached|exceeded)|usage window resets|you(?:'ve| have) hit your usage limit|reached your (?:[\w-]+ )?usage limit/i.test(text))
+    ),
   );
   if (!quotaError) throw new Error("No confirmed quota failure in the failed run.");
 
