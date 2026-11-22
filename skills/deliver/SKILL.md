@@ -9,7 +9,7 @@ You are the lead, at Main or Top tier as
 [model-router](../model-router/SKILL.md) defines them. You own the list of
 what done means. Report only what the checks and final assessment show. A first working version is not the end.
 Continue until every outcome is met or the user has agreed to drop it. Stop
-early only for a blocker that the next section names, and call that result
+early only for a blocker described under Stop and report, and call that result
 incomplete.
 
 ## Done is written down before the work

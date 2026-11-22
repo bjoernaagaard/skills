@@ -17,9 +17,12 @@ safe comparison is possible, use a known wrong result to show the check can
 distinguish it. Use disposable inputs for writes.
 
 Save the proven steps in a project-local SKILL.md at the location the target
-host discovers. Follow the repository's existing naming convention. Include
+host discovers. Follow the repository's naming convention. If it has none, use
+`verify-<app>/SKILL.md` in the host's project skills directory. Supply a
+name and a description that identifies the flow. Include
 required setup, observable pass and failure conditions, and cleanup for
-anything the flow creates. Respect the project's test and publication rules.
+only the scratch data and processes this run creates. Preserve evidence the
+user needs and avoid collisions with a running instance. Respect the project's test and publication rules.
 
 Follow the saved instructions from a fresh starting state. Report the path,
 the result you observed and any step you could not exercise.

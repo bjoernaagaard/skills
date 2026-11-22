@@ -9,7 +9,8 @@ Read the applicable Git instructions and the request before choosing a destinati
 For direct delivery, use the authorized default branch. For branch-based delivery,
 work on the task branch and push only to that branch when authorized. Treat a
 push, a merge request, a remote merge and a comment as separate actions. Apply
-the environment's approval rule to each. Choose the permitted local branch before committing. If publication permission
+the environment's approval rule to each. Choose the permitted local branch before
+committing. If publication permission
 is unclear, finish the local work and ask about the exact outstanding action.
 
 ## 1. Commit
@@ -18,37 +19,39 @@ Inspect the diff and stage only the requested changes. Check the commits that wo
 conventions. Use [restack](../restack/SKILL.md) only if the user asks for clean
 history.
 
-## 2. Rebase
+## 2. Update the branch
 
-Follow [rebase](../rebase/SKILL.md), including its shallow clone recovery. Ask
-the user before you resolve a conflict where both sides changed behavior and
-the right result is not obvious. Resolve mechanical conflicts yourself.
+Resolve the push remote, destination branch and integration base from the
+request, repository instructions and Git configuration. Fetch the relevant
+refs. For direct delivery, rebase onto the fetched destination. For an
+unpublished task branch, use its intended base. Follow the working-tree and
+shallow-clone guidance in [rebase](../rebase/SKILL.md) with the resolved refs.
+
+For a published task branch, check that its fetched tip is an ancestor of HEAD.
+If it is, no synchronization with that tip is needed. If the tips diverged,
+preserve published commits when integrating remote changes. Update from the
+integration base only when the project requires it. If the only permitted
+strategy would rewrite published history, ask before rewriting it.
+
+Resolve mechanical conflicts. Ask when both sides changed behavior and the
+intended result is unclear.
 
 ## 3. Test
 
-Run the full test suite once, on the rebased tree.
-
-If a check fails, decide whether this work broke it. Create a disposable
-worktree at `origin/HEAD`, run the same check there, then remove the worktree.
-
-- The check also fails on `origin/HEAD`: the failure came before this work.
-  Ignore it and name it in the report.
-- The check passes on `origin/HEAD`: this work broke it. Fix it, commit the
-  fix, and run the suite again.
+Run the project's full test suite on the outgoing commit. If a check fails,
+run the same check in a disposable worktree at the fetched integration base.
+Remove that worktree afterwards. Report a failure present on the base. Fix a
+regression introduced by the change and rerun the suite.
 
 ## 4. Push
 
-Verify the remote and destination, then push the tested commit with
-`git push <remote> HEAD:<authorized-branch>` when permitted. Never force push
-the default branch. For a task branch rejected because it moved, fetch and
-inspect the new commits before reconciling the histories.
-
-If the push is rejected because `origin/HEAD` moved, fetch and rebase again,
-then push again. Do not rerun the test suite after a later fetch, rebase, or
-rejected push. Rerun it only when conflict resolution or another local edit
-changed files after the last passing run.
+Verify the push URL and destination before pushing the tested commit with
+`git push <remote> HEAD:<authorized-branch>`. Never force push the default
+branch. If the remote moved, fetch again and apply the same branch rules.
+Run the checks again if the resulting tree changed.
 
 ## Report
 
-Name the destination and pushed commit range, or the local commit and pending action, the test result, any failure you ignored and the
-proof that it also fails on `origin/HEAD`, and how you resolved each conflict.
+Give the remote, destination and pushed commit range, or the local commit and
+the action awaiting approval. Include the test result, any failure reproduced
+on the base, and how you resolved conflicts.
