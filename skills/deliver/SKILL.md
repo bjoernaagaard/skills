@@ -7,8 +7,7 @@ description: Finish a multi-part task completely and prove each part with a chec
 
 You are the lead, at Main or Top tier as
 [model-router](../model-router/SKILL.md) defines them. You own the list of
-what done means. You report only what
-the checks and the grader show. A first working version is not the end.
+what done means. Report only what the checks and final assessment show. A first working version is not the end.
 Continue until every outcome is met or the user has agreed to drop it. Stop
 early only for a blocker that the next section names, and call that result
 incomplete.
@@ -58,10 +57,10 @@ Do the work yourself, or hand rows to workers through
 paths it owns and the checks, and give no two workers the same path. Only
 you edit `DONE.md`. Keep the rows that test how the parts fit together.
 
-## A grader from the other family agrees
+## Grade the result
 
-Start one grader from the other model family, at Main or Top tier, in a fresh
-session. Give it the request, `DONE.md` and the result, and do not give it
+Select one fresh grader using the independent review rule in
+[model-router](../model-router/SKILL.md). Give it the request, `DONE.md` and the result, and do not give it
 your transcript or your opinion. The grader edits no file. Ask it to run
 every check, to judge each "judged" row, to say whether each check proves
 its whole outcome, and to name the outcomes the request implies but
@@ -72,17 +71,21 @@ the user your evidence. The last grade must come after the last change to the wo
 
 ## Stop and report
 
-The task is complete when every row is `met`, `removed` or `deferred` and
-the last grade has no open finding. Say that it is complete only then.
+If no fresh grader is available, run the checks and assess each judged row yourself.
+State which conclusions are your own. Leave an explicitly required independent grade open.
 
-Stop with an incomplete result only when a row is `abandoned` or you dispute
+The task is complete when every row is `met`, `removed` or `deferred` and
+the final assessment has no open finding or unmet review requirement. Say that it is complete only then.
+
+Stop with an incomplete result when required review is unavailable, a row is `abandoned`, or you dispute
 a finding, because then the user must decide. Start the report with the word
 "Incomplete", then each abandoned row and each disputed finding with its
 evidence.
 
 In both cases, report the rows that are not `met` with their reasons, then
-the grader's result. Measure again each number you report. Delete `DONE.md`
-when every row is `met` or `removed`, and keep it when a row is still owed.
+who assessed the result and what they found. Measure again each number you report.
+Delete `DONE.md` only after completion when every row is `met` or `removed`.
+Keep it while any outcome, finding or required review remains open.
 
 Run only checks that you wrote or read in this session. Show the user each
 check in a `DONE.md` that came from somewhere else before you run it.

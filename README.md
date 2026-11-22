@@ -9,7 +9,7 @@ I use these skills in Claude Code and Codex to work with Git, check code changes
 | [rebase](skills/rebase/SKILL.md) | Update your branch and keep uncommitted changes. |
 | [restack](skills/restack/SKILL.md) | Split or reorder commits for review. |
 | [review](skills/review/SKILL.md) | Ask a second agent to review your changes. |
-| [ship](skills/ship/SKILL.md) | Commit, rebase, test, and push to the default branch. |
+| [ship](skills/ship/SKILL.md) | Verify the change and ship it to the destination allowed by the project. |
 
 ## Planning and code changes
 
@@ -20,6 +20,8 @@ I use these skills in Claude Code and Codex to work with Git, check code changes
 | [honest-performance](skills/honest-performance/SKILL.md) | Measure performance and check a claimed speedup. |
 | [simplify-change](skills/simplify-change/SKILL.md) | Remove code a change doesn't need. |
 | [verify-change](skills/verify-change/SKILL.md) | Run the changed feature and show the result. |
+| [create-project-verifier](skills/create-project-verifier/SKILL.md) | Write repeatable steps for checking a project through its app or command. |
+| [session-pickup](skills/session-pickup/SKILL.md) | Recover where a task stopped and what remains. |
 | [deliver](skills/deliver/SKILL.md) | Define what counts as done and check each deliverable. |
 | [no-handoff](skills/no-handoff/SKILL.md) | Have the agent finish the steps it can take itself. |
 

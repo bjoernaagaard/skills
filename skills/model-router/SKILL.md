@@ -27,4 +27,4 @@ Delegate work that splits into independent pieces whose results come back as a s
 
 ## Routes
 
-- **Second review from another family.** When a missed error is costly, add one reviewer from a different family at Main or Top, in a fresh session that has not seen the first review.
+- **Independent review.** Give a fresh reviewer the goal, artifact and checks. Withhold the author's transcript and verdict. For consequential work prefer another authorized model family at Main or Top. With one family available, use a fresh session in that family. If the host cannot start a fresh reviewer, run the checks yourself and disclose that independent review was unavailable. If the user required a particular reviewer, report the unmet requirement. Stay within the providers authorized for the project.

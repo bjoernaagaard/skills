@@ -1,4 +1,4 @@
 interface:
   display_name: "Ship"
-  short_description: "Commit, rebase, test, and push to origin/HEAD"
-  default_prompt: "Use $ship to commit my changes, rebase on origin, run the tests, and push."
+  short_description: "Verify and ship to the authorized destination"
+  default_prompt: "Use $ship to commit my changes, run the checks, and follow this project’s shipping policy."
