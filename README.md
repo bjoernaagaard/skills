@@ -2,7 +2,12 @@
 
 I use these skills in Claude Code and Codex to work with Git, check code changes, and write clear replies.
 
-Use [$bmode](skills/bmode/SKILL.md) to apply the working conventions without hooks. Install it with no-handoff, emphasis, deliver, model-router, and ship. The [recurring mistakes prompt](prompts/prevent-recurring-mistakes.md) shows how to use it on a repository.
+Use [$bmode](skills/bmode/SKILL.md) to apply the working conventions without hooks. Install it with no-handoff, emphasis, deliver, model-router, and ship.
+
+## Prompts
+
+- [Prevent recurring mistakes](prompts/prevent-recurring-mistakes.md)
+- [Audit code comments](prompts/audit-code-comments.md)
 
 ## Git
 
