@@ -24,6 +24,7 @@ Use [$bmode](skills/bmode/SKILL.md) to apply the working conventions without hoo
 | --- | --- |
 | [issue-tree](skills/issue-tree/SKILL.md) | Break a question into parts and check for gaps. |
 | [model-router](skills/model-router/SKILL.md) | Choose when to delegate and which model to use. |
+| [setup-bstack](skills/setup-bstack/SKILL.md) | Set approved delegate models and quota fallbacks in T3 Code. |
 | [honest-performance](skills/honest-performance/SKILL.md) | Measure performance and check a claimed speedup. |
 | [simplify-change](skills/simplify-change/SKILL.md) | Remove code a change doesn't need. |
 | [verify-change](skills/verify-change/SKILL.md) | Run the changed feature and show the result. |

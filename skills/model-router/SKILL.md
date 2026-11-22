@@ -26,5 +26,6 @@ Delegate work that splits into independent pieces whose results come back as a s
 - **The user's choice wins.** A model, effort level, or routing table that the user or project sets overrides this skill.
 
 ## Routes
+- **T3 Code quota routing.** When the machine has a bstack T3 profile, use [setup-bstack](../setup-bstack/SKILL.md) to select an approved target and handle quota failures.
 
 - **Independent review.** Give a fresh reviewer the goal, artifact and checks. Withhold the author's transcript and verdict. For consequential work prefer another authorized model family at Main or Top. With one family available, use a fresh session in that family. If the host cannot start a fresh reviewer, run the checks yourself and disclose that independent review was unavailable. If the user required a particular reviewer, report the unmet requirement. Stay within the providers authorized for the project.
