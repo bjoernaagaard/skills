@@ -2,6 +2,8 @@
 
 I use these skills in Claude Code and Codex to work with Git, check code changes, and write clear replies.
 
+Use `$bmode` to apply the working conventions without hooks. Install it with no-handoff, emphasis, deliver, model-router, and ship.
+
 ## Git
 
 | Skill | When to use it |
