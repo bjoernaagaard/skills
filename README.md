@@ -2,6 +2,42 @@
 
 The repository holds the agent skills I use every day, and each skill works in Claude Code and Codex.
 
+## Prompt and agent instruction catalog
+
+Checked 22 November 2026. Start with the row for the instruction you are writing. Model cards answer questions about capabilities and availability. The guides below explain how to write the instruction.
+
+| What are you writing? | What belongs there? | Where to look |
+| --- | --- | --- |
+| A task prompt | The result you want this time, the relevant inputs, and how the agent can tell it has finished. | [OpenAI task prompting](https://learn.chatgpt.com/docs/prompting), [Claude Code best practices](https://code.claude.com/docs/en/best-practices), [Gemini prompt design](https://aistudio.google.com/docs/prompting-strategies) |
+| Repository instructions | Facts and rules that apply across tasks in this project. Check which file the agent reads and how directory scope affects it. | [Codex AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md), [Claude Code memory and CLAUDE.md](https://code.claude.com/docs/en/memory), [Anthropic’s AGENTS.md mod](https://github.com/anthropics/claude-code/blob/main/mods/agents-md/README.md), [Antigravity rules](https://antigravity.google/docs/rules/) |
+| A reusable skill | Give the skill a description that says when to use it. Put the procedure in SKILL.md and load supporting material when the task needs it. | [Agent Skills specification](https://agentskills.io/specification), [OpenAI skill authoring](https://learn.chatgpt.com/docs/build-skills), [Claude Code skills](https://code.claude.com/docs/en/skills), [Antigravity skills](https://antigravity.google/docs/skills?app=antigravity) |
+
+### Model-specific guidance
+
+| Provider | Start here | Check when adapting an instruction |
+| --- | --- | --- |
+| OpenAI | [Using GPT-6.2](https://developers.openai.com/api/docs/guides/latest-model) | Choose between [Astra](https://developers.openai.com/api/docs/models/gpt-6.2-astra) and [Sol](https://developers.openai.com/api/docs/models/gpt-6.2-sol). For an API integration, check how developer instructions and task inputs are passed in the [Responses prompting guide](https://developers.openai.com/api/docs/guides/prompt-engineering?api-mode=responses). |
+| Anthropic | [Current Claude prompting practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices) | The [Fable 5.2 and Mythos 5.2 guide](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2) covers effort, approvals and early stopping. The [Opus 5.5 guide](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5) explains how to handle a progress update that ends a turn before the work is done. |
+| Google | [Gemini 4 Neon model card](https://deepmind.google/models/model-cards/gemini-4-neon/) | Google positions Neon for daily agent work, Carbon for deeper long-running work, and Hydrogen for fast execution. Neon defaults to high thinking. Check the supported levels before carrying a setting across models. [Antigravity model guidance](https://discuss.ai.google.dev/t/gemini-4-neon-and-orchestrator-neon-are-now-available-in-google-antigravity/202301) · [Gemini thinking guide](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/thinking) |
+
+### Other general-purpose model providers
+
+Use these first-party references when targeting one of these models. A model listing establishes what the provider offers. It does not establish that a coding agent reads AGENTS.md or supports skills.
+
+| Provider | Model reference | What to check |
+| --- | --- | --- |
+| Alibaba | [Qwen3.8-Max](https://www.alibabacloud.com/help/en/model-studio/qwen3-8-max) | Model ID and capabilities in the deployment region |
+| DeepSeek | [V4 Pro and V4.1 Flash](https://api-docs.deepseek.com/updates/) | Which model an API name selects after an update |
+| Meta | [Muse Wonder and Wonder Full](https://about.fb.com/news/2026/10/introducing-muse-wonder-models/) | Which model is available through the API or Muse Code |
+| Microsoft AI | [MAI Thinking 1](https://microsoft.ai/news/introducing-mai-thinking-1/) | Reasoning use cases and Foundry availability |
+| MiniMax | [MiniMax-M3](https://huggingface.co/MiniMaxAI/MiniMax-M3) | How to select a reasoning mode |
+| Mistral | [Mistral Large 4](https://docs.mistral.ai/models/mistral-large) | Function calling and structured output support |
+| Moonshot AI | [Kimi K3.1 Pro](https://www.kimi.com/code/docs/en/kimi-code/whats-new.html) | Supported thinking levels and when to start a fresh coding session |
+| xAI | [Grok 4.7](https://docs.x.ai/grok/overview) | Tools available in the Grok app |
+| Z.ai | [GLM-5.3](https://huggingface.co/zai-org/GLM-5.3) | The publisher’s chat template and inference examples |
+
+On a model upgrade, revisit its provider guide and try the existing instructions on a representative task. Keep a version-specific guide while you still use that version. Update the date above after checking the links and the model names again.
+
 ## Install the skills
 
 Run the following command to install the skills:
