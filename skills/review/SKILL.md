@@ -9,12 +9,14 @@ Have a fresh subagent review the current changes, then report what it found.
 
 ## Brief the reviewer
 
-Start one subagent with the Task tool (`Agent` in Claude Code,
-`spawn_agent` in Codex). Give it:
+Choose a fresh reviewer with [model-router](../model-router/SKILL.md).
+Use the host the user requested. If independent review is unavailable,
+follow model-router's disclosure rule. Give the reviewer:
 
 - The goal of the change, in the user's words.
-- How to read the change: `git diff $(git merge-base HEAD origin/HEAD)` plus
-  untracked files, so it sees committed and uncommitted work.
+- The comparison base from the request or the project's branch policy.
+  Compare the working tree to its merge base with HEAD and inspect untracked
+  files so the review covers committed and uncommitted changes.
 - The scope: correctness bugs, breaking changes, security problems, and code
   that is harder to maintain than it needs to be.
 - An instruction to report each finding with its file and line, the concrete

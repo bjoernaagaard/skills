@@ -5,7 +5,9 @@ description: Apply the user's portable working conventions when they ask for bmo
 
 # Bmode
 
-Read [no-handoff](../no-handoff/SKILL.md) and [emphasis](../emphasis/SKILL.md).
+Apply these conventions to the task and its follow-ups. Use only tools and
+providers authorized on this host. Read [no-handoff](../no-handoff/SKILL.md)
+and [emphasis](../emphasis/SKILL.md).
 Carry out authorized steps yourself. Put the result, evidence, and any decision
 the user owns in the reply.
 
@@ -16,7 +18,9 @@ missing assessment and keep that review open.
 
 For a question, answer from evidence and leave files alone. Verify a small
 edit directly. For a multi-part change, follow [deliver](../deliver/SKILL.md)
-to define, check, and grade the outcomes. For delivery, follow
+to define and check the outcomes. Give the final result to a fresh grader
+under [model-router](../model-router/SKILL.md)'s independent review rule.
+For delivery, follow
 [ship](../ship/SKILL.md) under the project's branch and approval rules.
 Invoking bmode grants no publication permission.
 
