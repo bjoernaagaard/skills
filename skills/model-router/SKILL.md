@@ -11,15 +11,15 @@ Delegate work that splits into independent pieces whose results come back as a s
 
 ## Pick the tier
 
-| Tier | Use for | Claude | OpenAI |
-| --- | --- | --- | --- |
-| Light | high-volume simple work (classify, route, tag, extract) and subagents whose errors are easy to catch | Haiku | Luna |
-| Fast | fast, well-scoped work: a bug fix, a specified feature, an everyday document | Sonnet | Terra |
-| Main | the default lead: everyday engineering, debugging, multi-PR work, complex knowledge work | Opus | Sol |
-| Top | the hardest work: large refactors and migrations, architecture plans, deep research, quantitative analysis | Fable | Astra |
+| Tier | Use for | Claude | OpenAI | Gemini |
+| --- | --- | --- | --- | --- |
+| Light | high-volume simple work (classify, route, tag, extract) and subagents whose errors are easy to catch | Haiku | Luna | none |
+| Fast | fast, well-scoped work: a bug fix, a specified feature, an everyday document | Sonnet | Terra | Hydrogen |
+| Main | the default lead: everyday engineering, debugging, multi-PR work, complex knowledge work | Opus | Sol | Neon |
+| Top | the hardest work: large refactors and migrations, architecture plans, deep research, quantitative analysis | Fable | Astra | Carbon |
 
 - **Lowest tier that fits the step.** Give each subagent a check and the lowest tier whose mistakes that check catches. A step that later steps build on starts at the tier it needs, because a failed cheap try is paid twice.
-- **Effort.** Start at `medium`. Use `low` for simple work with a check, and `high` for harder work or more self-checking.
+- **Effort.** Start at `medium`. Use `low` for simple work with a check, and `high` for harder work or more self-checking. On OpenAI, start Luna at `high` and Astra at `low`.
 - **Escalate in order.** Add a check, then raise effort one level, then move up one tier at lower effort. Move to Top before raising Main past `high`.
 - **Ask before Top.** When Top is the right pick, start nothing. Ask the user to confirm it, and offer Main as the cheaper choice.
 - **Use the harness's own IDs.** List the models your harness can start, match a tier by the name inside an ID, such as `opus` or `terra`, and pass the ID exactly as listed, with whatever provider or proxy prefix it carries. If the tier you want is missing, take the nearest listed one and say so.
