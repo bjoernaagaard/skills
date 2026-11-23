@@ -2,11 +2,12 @@ Use $bmode on this repository. Read the Git history, past bug fixes, and
 available review comments. Start with the best-evidenced recurring mistake.
 Name two occurrences and the constraint both violated.
 
-Make that mistake impossible through the design if you can. Then try types,
-then a lint rule whose error names the fix, then a permitted behavioral
-check. Choose the first option that actually prevents or catches the mistake.
-Remove comments that repeat the code. Before removing a comment that carries
-a real constraint, show where that constraint is now enforced.
+Make that mistake impossible instead of documenting it. Try the design first,
+then types, then a lint rule whose error names the fix, then a permitted
+behavioral check. Choose the first option that actually prevents or catches
+the mistake. Remove comments that repeat the code. Encode the constraint
+behind a comment that matters in the same order, show where it is now
+enforced, and then remove the comment.
 
 For a bug involving concurrency, retries, or state transitions, build a
 formal model when it can replay a documented failure. Show the failing
