@@ -13,17 +13,20 @@ Skip visuals for a single lookup or simple fact, and answer in one sentence inst
 
 | Question or structure | View |
 | --- | --- |
+| Separate items, findings, or options | Three to five bullets, each starting with a bold label |
 | Exact comparison across shared fields | Compact Markdown table |
 | File layout, ownership, or call hierarchy | Indented text tree |
 | Branching logic or state transitions | Pseudocode |
 | Structural before and after change | Focused `diff` with enough surrounding context |
 | Request flow or messages between parts | Small Mermaid diagram |
 | Numeric trend, spike, magnitude, or spatial layout | Self-contained HTML chart or visual in T3 Code |
+| Formula or equation | LaTeX math as `$…$` or `$$…$$`, which T3 Code typesets when Render math is on |
+| Screenshots or image files side by side | HTML page in T3 Code that places the local images by file path |
 
 ## Use the right T3 surface
 
 - **Inline T3 thread HTML.** When a chart, spatial layout, or interactive view earns HTML in T3 Code, build self-contained HTML with inline styles and scripts. Call `html_preview` first and inspect the rendered PNG, height, and console output for legibility, clipping, narrow layout, and errors. When the native `html_render` tool is exposed, send the checked HTML with it. Never start a server or use `preview_*` browser tools to show an explanation.
-- **Verify separately.** Check the `html_render` receipt, and report the preview and receipt separately from what the reader sees on their client.
+- **Check the receipt.** Check the `html_render` receipt. Report the preview or the receipt only when one shows a problem. They show what was sent, not what the reader's client displays.
 - **Fallbacks.** If `html_preview` or `html_render` is unavailable, disabled, or fails, report the tool limit and present the labeled values or relationship in Markdown instead of stalling or working around tool permissions. When math rendering is off, write an essential formula in plain words.
 - **Other requested surfaces.** When the user asks for an image to post, send, or use elsewhere, write a `.png` file and return its path instead of calling `html_render`. When the user names another surface, use it within task scope.
 - **Scope and routing.** An explanation request authorizes inline delivery in the current thread. Controlling a browser or device, writing files to disk, or sharing externally each requires matching task scope. Skip inspection of how a live web interface or CSS effect was built, or suggest `/explain-interface` when installed.
