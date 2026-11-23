@@ -23,7 +23,4 @@ Respect explicit-only triggers. If a companion is missing, use the guidance here
   For authorized delivery, follow [ship](../ship/SKILL.md) and the project's branch rules.
   Invoking bmode grants no publication permission.
 
-Use only authorized tools and providers. Honor a council agreement for its stated
-duration. At the start of each covered task, involve the named members through
-the requested host. Include their findings. Keep an unavailable member's
-assessment open and tell the user which one is missing.
+Use only authorized tools and providers.
