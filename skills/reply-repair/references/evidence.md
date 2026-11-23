@@ -28,8 +28,8 @@ The tests replayed ten failed turns in fresh sessions, and a judge model from an
 
 The results set three choices in the wording.
 
-- **Both closing lines are always written.** A wording that left out "You do:" when the reader had nothing to do scored 1 of 8 on the "what do I do" turn, and the wording that always writes it scored 8 of 8.
-- **The word limit names an outlet.** Models held the limit of 100 words in 37 of 40 replies once the rule said to put the rest in a table or a tree. Without the outlet, the two largest Claude models held it in about half.
+- **The closing line is always written.** A wording that left out "You do:" when the reader had nothing to do scored 1 of 8 on the "what do I do" turn, and the wording that always wrote it scored 8 of 8. The skill has closed with "Next:" since 18 November, as the owner's global instructions do, and these tests ran before that.
+- **The word limit names an outlet.** Models held the limit of 100 words in 37 of 40 replies once the rule said to put the rest in a visual, then worded as a table or a tree. Without the outlet, the two largest Claude models held it in about half.
 - **Global instructions point to the skill.** With 198 skills installed, a model opened the skill in 0 of 5 complaint turns from the description alone, and in 6 of 10 once the global instructions named it.
 
 ## Known limits
