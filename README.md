@@ -2,7 +2,7 @@
 
 I use these skills in Antigravity, Claude Code and Codex to work with Git, check code changes, and write clear replies.
 
-Use [$bmode](skills/bmode/SKILL.md) to apply the working conventions without hooks. Install it with no-handoff, emphasis, deliver, model-router, and ship.
+Use [$bmode](skills/bmode/SKILL.md) to apply the working conventions without hooks. It starts with no-handoff and emphasis, then loads installed companions when the task calls for them. For a selective installation, the skill links to its companions.
 
 ## Prompts
 
