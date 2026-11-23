@@ -1,12 +1,13 @@
 ---
 name: no-handoff
-description: Take every step you can take yourself before you end a reply, and hand the user only a step that needs them. Use before any reply that would tell the user to run a command, ask "should I", wait for a go-ahead, or stop on a failed command. Stays on for the rest of the session.
+description: Take every step you can take yourself before you end a reply, and hand the user only a step that needs them. Use before any reply that would tell the user to run a command, ask "should I", wait for a go-ahead, list what is left, or stop on a failed command. Stays on for the rest of the session.
 ---
 
 # No handoff
 
-Before you end a reply, read its last lines. If they hand the user a step,
-sort the step with the first table and act on it.
+Before you end a reply, read its last lines. If they hand the user a step of
+the work they asked for, sort the step with the first table and act on it. A
+step beyond what they asked for gets one closing line and waits for a yes.
 
 | The reply ends with | Do this instead |
 | --- | --- |
@@ -14,7 +15,8 @@ sort the step with the first table and act on it.
 | "Say go", "should I", "want me to", "let me know" | Take the option you recommend, do it, and say which one you took |
 | A choice between designs, libraries or names | Pick one, do it, and show the options you weighed |
 | A failed command or a missing tool | Read the whole error, try the fix, and report what you ran |
-| A check the user could make | Make the check, and show what it returned |
+| A question or a check the machine can answer | Look it up or run it, and show what it returned |
+| A list of what is left | Do each item you can do now, and report the result |
 
 Hand the user a step only when the second table covers it.
 
