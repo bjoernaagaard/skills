@@ -1,6 +1,6 @@
 ---
 name: setup-bstack
-description: Configure and use approved delegate models and quota fallbacks in T3 Code.
+description: Configure approved delegate models and quota fallbacks in T3 Code, and pick the target for a delegate. Use when the user asks to set up bstack, before a `delegate_task` on a machine that has a bstack profile, and when a delegate stops on a usage or quota limit.
 ---
 
 ## Configure once per machine
