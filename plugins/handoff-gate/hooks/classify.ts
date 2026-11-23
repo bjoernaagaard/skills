@@ -9,6 +9,7 @@ export type Verdict = {
     | 'leaves' // a release, a deploy, a shared push or a message to a person
     | 'money' // a purchase or a paid plan
     | 'review' // a draft the user asked to read, or a note for a later task
+    | 'offer' // work the agent recommends under "Next:", which waits for a yes
     | 'command' // a command the agent can run
     | 'permission' // a go-ahead for work the agent can do
   line: string
@@ -16,6 +17,7 @@ export type Verdict = {
 
 const CLOSING = /^\**(you do|next step|action needed|your turn|to do|next(?=\**:)):?\**:?\s*(.+)$/im
 const NOTHING = /^[*"'`]*(nothing|none|n\/a)\b/i
+const AWAITS_YES = /\b[Yy]es\b|\bI\b/
 const OFFER =
   /[^.\n]*\b(should I\b|shall I\b|want me to\b|would you like me to\b|let me know (if|when|whether)\b|say (yes|go|the word)\b|you('ll| will) need to run\b|please run\b|you can run\b)[^.\n?]*[.?]?/i
 
@@ -37,6 +39,7 @@ export function classify(reply: string): Verdict {
   const line = closing ? closing[2].trim() : (OFFER.exec(reply.slice(-600))?.[0].trim() ?? '')
 
   if (line === '' || NOTHING.test(line)) return { kind: 'none', line }
+  if (closing?.[1].toLowerCase() === 'next' && AWAITS_YES.test(line)) return { kind: 'offer', line }
 
   for (const [kind, pattern] of RULES) {
     if (pattern.test(line)) {
@@ -52,6 +55,8 @@ const HOW: Partial<Record<Verdict['kind'], string>> = {
   command: 'Run it now and report the output.',
   permission: 'Take the option you recommend and do it now.',
 }
+const HOW_UNDER_NEXT =
+  'If it belongs to what I asked for, take it now and report the result. If it is new work, keep it as the Next line and wait for my yes.'
 
 /** The text that sends the agent back to work, or undefined when the reply may stand. */
 export function objection(reply: string): string | undefined {
@@ -60,9 +65,11 @@ export function objection(reply: string): string | undefined {
 
   if (how === undefined) return undefined
 
+  const underNext = CLOSING.exec(reply)?.[1].toLowerCase() === 'next'
+
   return [
     `Your reply hands me a step that you can take: "${line.slice(0, 300)}"`,
-    how,
+    underNext ? HOW_UNDER_NEXT : how,
     'Hand me a step only when it needs a credential or admin rights you lack, my hands, my money, the deletion of my data, something that leaves my machine, or a restart of the app you run in, and then name which one it is.',
   ].join(' ')
 }
