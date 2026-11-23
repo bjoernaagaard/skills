@@ -5,10 +5,7 @@ description: Draft, revise, preview, or publish a GitHub pull request title and 
 
 # Write a PR body
 
-Start from the exact source the request identifies.
-
-- **Self-contained fixture.** When the request supplies the change and check results directly, work from that fixture alone. Do not inspect an unrelated checkout or run git searches unless the request ties that checkout to the change. Keep fixture actions inside the fixture.
-- **Real repository change.** Resolve the repository, base branch, and head branch, and read the complete intended diff. Include uncommitted local edits only when the request calls for them. Read the repository PR template if one exists. When revising an existing PR, read its current title and body first and preserve relevant authored wording, migration notes, links, and checklists.
+Start from the exact source the request identifies. For a change in a repository, resolve the repository, base branch, and head branch, and read the complete intended diff. Include uncommitted local edits only when the request calls for them. Read the repository PR template if one exists. When revising an existing PR, read its current title and body first and preserve relevant authored wording, migration notes, links, and checklists.
 
 ## Write for the reviewer
 
@@ -36,4 +33,4 @@ For a change that skips duplicate saves with a supplied CLI result, lead with "I
   write changed content to disk
 ~~~
 
-Report "The fixture CLI reported zero writes on the second identical save." Include a command only if it was supplied or observed.
+Report "The CLI reported zero writes on the second identical save." Include a command only if it was supplied or observed.
