@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write PR Body"
+  short_description: "Draft, revise, or publish a clear GitHub PR body"
+  default_prompt: "Use $write-pr-body to draft or revise this pull request description from the diff and checks."

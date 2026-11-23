@@ -16,6 +16,7 @@ Use [$bmode](skills/bmode/SKILL.md) to apply the working conventions without hoo
 | [rebase](skills/rebase/SKILL.md) | Update your branch and keep uncommitted changes. |
 | [restack](skills/restack/SKILL.md) | Split or reorder commits for review. |
 | [review](skills/review/SKILL.md) | Ask a second agent to review your changes. |
+| [write-pr-body](skills/write-pr-body/SKILL.md) | Draft, revise, preview, or publish a GitHub pull request title and body. |
 | [ship](skills/ship/SKILL.md) | Verify the change and ship it to the destination allowed by the project. |
 
 ## Planning and code changes
@@ -23,6 +24,7 @@ Use [$bmode](skills/bmode/SKILL.md) to apply the working conventions without hoo
 | Skill | When to use it |
 | --- | --- |
 | [issue-tree](skills/issue-tree/SKILL.md) | Break a question into parts and check for gaps. |
+| [research-design-implement](skills/research-design-implement/SKILL.md) | Investigate a codebase or system for research only, or run and resume design and implementation phases. |
 | [model-router](skills/model-router/SKILL.md) | Choose when to delegate and which model to use. |
 | [setup-bstack](skills/setup-bstack/SKILL.md) | Set approved delegate models and quota fallbacks in T3 Code. |
 | [honest-performance](skills/honest-performance/SKILL.md) | Measure performance and check a claimed speedup. |
@@ -42,6 +44,7 @@ Use [$bmode](skills/bmode/SKILL.md) to apply the working conventions without hoo
 | [reply-repair](skills/reply-repair/SKILL.md) | Rewrite a reply the reader couldn't act on. |
 | [sbar](skills/sbar/SKILL.md) | Write a handover with the situation, background, assessment, and recommendation. |
 | [scholarly-paper-revision](skills/scholarly-paper-revision/SKILL.md) | Check the math, notation, and explanations in a LaTeX paper. |
+| [visual-explanation](skills/visual-explanation/SKILL.md) | Explain a system, change, trend, or tradeoff with the smallest useful visual. |
 
 ## Install the skills
 

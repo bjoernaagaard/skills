@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research, Design and Implement"
+  short_description: "Research a system or run design and implementation phases"
+  default_prompt: "Use $research-design-implement to research this system or run the requested phase."
