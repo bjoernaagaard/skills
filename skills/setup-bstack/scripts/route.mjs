@@ -117,11 +117,29 @@ function select({ profile, catalog, role, attempts = [], unavailableQuotaGroups 
   return { kind: "blocked", skipped };
 }
 
+function workflowModels({ profile, catalog }) {
+  validateProfile(profile, catalog);
+  return Object.fromEntries(Object.entries(profile.routes).map(([role, entries]) => [
+    role,
+    entries.map(({ target }) => ({
+      instanceId: target.providerInstanceId,
+      model: target.model,
+      options: Object.entries(target.options ?? {}).map(([id, value]) => ({ id, value })),
+    })),
+  ]));
+}
+
+const actions = {
+  validate: ({ profile, catalog }) => validateProfile(profile, catalog),
+  select,
+  models: workflowModels,
+};
+
 try {
   const [action] = process.argv.slice(2);
   const input = JSON.parse(readFileSync(0, "utf8"));
-  if (action !== "validate" && action !== "select") throw new Error("Expected validate or select.");
-  const output = action === "validate" ? validateProfile(input.profile, input.catalog) : select(input);
+  if (!Object.hasOwn(actions, action)) throw new Error("Expected validate, select or models.");
+  const output = actions[action](input);
   console.log(JSON.stringify(output));
 } catch (error) {
   process.exitCode = 1;
