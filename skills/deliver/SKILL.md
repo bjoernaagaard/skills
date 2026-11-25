@@ -5,7 +5,7 @@ description: Finish a multi-part task completely and prove each part with a chec
 
 # Deliver
 
-You are the lead, at Main or Top tier as
+You are the lead, at A or S tier as
 [model-router](../model-router/SKILL.md) defines them. You own the list of
 what done means. Report only what the checks and final assessment show. A first working version is not the end.
 Continue until every outcome is met or the user has agreed to drop it. Stop

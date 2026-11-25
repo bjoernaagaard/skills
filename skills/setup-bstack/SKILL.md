@@ -6,16 +6,16 @@ description: Configure approved delegate models and quota fallbacks in T3 Code, 
 ## Configure once per machine
 
 1. Call T3 Code's `orchestrator_capabilities`. Use exact provider instance IDs, models and option values. Check the existing profile at `${XDG_CONFIG_HOME:-$HOME/.config}/bstack/t3-routes.json`.
-2. Agree on ordered peers for the roles you need. Use a shared `quota` label for targets drawing from the same account, even when they appear under different provider instances. Use only providers and funding authorized for the project.
-3. Run `node <this skill directory>/scripts/route.mjs validate` with `{ "catalog": ..., "profile": ... }` as JSON on stdin. Save the validated profile and read it back. An example entry is `{"routes":{"implementation":[{"target":{"providerInstanceId":"codex","model":"gpt-6.2-sol","options":{"reasoningEffort":"medium"}}}]}}`. Use the live catalog to verify IDs in the example too.
+2. Agree on ordered peers for each tier you need, named S, A, B and C as [model-router](../model-router/SKILL.md) defines them. The order is the rotation, because the first target with quota left is picked. Use a shared `quota` label for targets drawing from the same account, even when they appear under different provider instances. Use only providers and funding authorized for the project.
+3. Run `node <this skill directory>/scripts/route.mjs validate` with `{ "catalog": ..., "profile": ... }` as JSON on stdin. Save the validated profile and read it back. An example entry is `{"routes":{"A":[{"target":{"providerInstanceId":"codex","model":"gpt-6.2-sol","options":{"reasoningEffort":"medium"}}}]}}`. Use the live catalog to verify IDs in the example too.
 
 ## Route a delegate
 
-Run the same script with `select` and JSON containing `catalog`, `profile`, and `role`. Set `independentFamily: true` when cross-family review is required. Pass the returned `target` unchanged to native `delegate_task`. A blocked result leaves the work or review open. Use separate T3 worktrees for concurrent writers.
+Run the same script with `select` and JSON containing `catalog`, `profile`, and `tier`. Set `independentFamily: true` when cross-family review is required. Pass the returned `target` to native `delegate_task`, and change only its effort option when model-router calls for another level. A blocked result leaves the work or review open. Use separate T3 worktrees for concurrent writers.
 
 ## Route a workflow agent
 
-A workflow `agent` step without `model` runs on the project default, which is often the most expensive model. Run the script with `models` and `{ "catalog": ..., "profile": ... }`. It prints each role's targets in order, in the shape `model` takes. Give every `agent` step the first target of the role that fits its stage, and pass the next target to its `agent.try` retry.
+A workflow `agent` step without `model` runs on the project default, which is often the most expensive model. Run the script with `models` and `{ "catalog": ..., "profile": ... }`. It prints each tier's targets in order, in the shape `model` takes. Give every `agent` step the first target of the tier that fits its stage, and pass the next target to its `agent.try` retry.
 
 ## Replace a failed delegate
 
@@ -29,4 +29,4 @@ An exhausted lead requires a T3 continuation outside the stopped agent. After sw
 
 Use one when its case comes up and it is installed.
 
-- Whether to delegate at all, and which tier and effort a role needs → [model-router](../model-router/SKILL.md)
+- Whether to delegate at all, and which tier and effort a step needs → [model-router](../model-router/SKILL.md)

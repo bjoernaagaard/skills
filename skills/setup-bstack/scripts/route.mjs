@@ -37,19 +37,19 @@ function targetProblem(target, catalog) {
 function validateProfile(profile, catalog) {
   const groups = new Map();
   const routes = Object.entries(profile.routes);
-  if (!routes.length) throw new Error("Configure at least one role.");
+  if (!routes.length) throw new Error("Configure at least one tier.");
 
-  for (const [role, entries] of routes) {
+  for (const [tier, entries] of routes) {
     if (!Array.isArray(entries) || !entries.length) {
-      throw new Error(`Configure at least one target for ${role}.`);
+      throw new Error(`Configure at least one target for ${tier}.`);
     }
     const seen = new Set();
     for (const entry of entries) {
       const { target } = entry;
       const problem = targetProblem(target, catalog);
       const key = JSON.stringify([target?.providerInstanceId, target?.model]);
-      if (problem) throw new Error(`${role}: ${problem}`);
-      if (seen.has(key)) throw new Error(`Duplicate target in ${role}: ${key}`);
+      if (problem) throw new Error(`${tier}: ${problem}`);
+      if (seen.has(key)) throw new Error(`Duplicate target in ${tier}: ${key}`);
 
       const group = quotaGroup(entry);
       if (typeof group !== "string" || !group.trim()) throw new Error("Quota groups need a name.");
@@ -62,7 +62,7 @@ function validateProfile(profile, catalog) {
     }
   }
 
-  return { valid: true, roles: routes.map(([role]) => role) };
+  return { valid: true, tiers: routes.map(([tier]) => tier) };
 }
 
 function failedQuota(attempt, entries) {
@@ -95,9 +95,9 @@ function failedQuota(attempt, entries) {
   return quotaGroup(entry);
 }
 
-function select({ profile, catalog, role, attempts = [], unavailableQuotaGroups = [], independentFamily = false }) {
-  const entries = Object.hasOwn(profile.routes, role) && profile.routes[role];
-  if (!entries?.length) throw new Error(`No approved route for ${role}.`);
+function select({ profile, catalog, tier, attempts = [], unavailableQuotaGroups = [], independentFamily = false }) {
+  const entries = Object.hasOwn(profile.routes, tier) && profile.routes[tier];
+  if (!entries?.length) throw new Error(`No approved route for ${tier}.`);
 
   const exhausted = new Set([...unavailableQuotaGroups, ...attempts.map((attempt) => failedQuota(attempt, entries))]);
   const skipped = [];
@@ -119,8 +119,8 @@ function select({ profile, catalog, role, attempts = [], unavailableQuotaGroups 
 
 function workflowModels({ profile, catalog }) {
   validateProfile(profile, catalog);
-  return Object.fromEntries(Object.entries(profile.routes).map(([role, entries]) => [
-    role,
+  return Object.fromEntries(Object.entries(profile.routes).map(([tier, entries]) => [
+    tier,
     entries.map(({ target }) => ({
       instanceId: target.providerInstanceId,
       model: target.model,
