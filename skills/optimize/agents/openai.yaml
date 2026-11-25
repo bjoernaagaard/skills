@@ -1,0 +1,4 @@
+interface:
+  display_name: "Optimize"
+  short_description: "Make code shorter, simpler and faster than its linters can"
+  default_prompt: "Use $optimize to make this code shorter, simpler and faster, with proof that the result is the same."
