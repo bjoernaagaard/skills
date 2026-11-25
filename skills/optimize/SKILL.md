@@ -43,15 +43,18 @@ six kinds, and each kind has tools that find it.
 
 | Kind | What it looks like | Tools that find it |
 | --- | --- | --- |
-| **Written twice** | Two functions or classes that differ in one value, such as the distribution they call. One of them with that value as a parameter replaces both. | `xpd outline <scope>` lists every definition with its members, so twins stand side by side. `xpd run -p '<pattern>'` finds each copy of a shape. |
-| **In the way** | A wrapper that only forwards, a setting that never varies, a branch for a case no caller sends, and code nothing calls. | `xpd run -p '<name>($$$ARGS)'` lists the callers and what they pass. |
+| **Written twice** | Two functions or classes that differ in one value, such as the distribution they call. One of them with that value as a parameter replaces both. | `xpd rules outline <scope>` lists every definition with its members, so twins stand side by side. `xpd rules run --pattern '<pattern>'` finds each copy of a shape. |
+| **In the way** | A wrapper that only forwards, a setting that never varies, a branch for a case no caller sends, and code nothing calls. | `xpd rules run --pattern '<name>($$$ARGS)'` lists the callers and what they pass. |
 | **Already guaranteed** | A check, a clip, a sort, a copy or a conversion whose result an earlier step or the library already ensures. | `xpd api <Class.method>` shows what a library call returns and its defaults. |
 | **Already in a library** | Code that rebuilds what a dependency of the project provides. | `xpd find "<task>"` ranks the symbols of the project's libraries for a task. Outside Python, read the documentation of the dependency. |
-| **Done again** | The same value computed in several places, on every call or inside a loop, when one computation before the loop serves them all. | `xpd graph <file>` shows which step reads what. `xpd impact` traces one column to its uses. |
-| **Larger than the answer** | A matrix, a list or a join much larger than the result it is reduced to, or work that grows with the square of the input when the result needs one pass. | A profiler on the representative workload. `xpd map` plans a move from pandas to Polars or from eager to lazy. |
+| **Done again** | The same value computed in several places, on every call or inside a loop, when one computation before the loop serves them all. | `xpd graph <file>` shows which step reads what. `xpd graph impact` traces one column to its uses. |
+| **Larger than the answer** | A matrix, a list or a join much larger than the result it is reduced to, or work that grows with the square of the input when the result needs one pass. | A profiler on the representative workload. `xpd graph map` plans a move from pandas to Polars or from eager to lazy. |
 
-The xpd commands that read Python need a Python project. `xpd outline` and
-`xpd run` read most languages.
+The xpd commands that read Python need a Python project. `xpd rules outline` and
+`xpd rules run` read most languages. When the installed xpd has `xpd optimize`,
+start from its list: it reports near copies, calls computed twice or repeated by
+a loop, arguments that pass a library default and matrices built to be reduced,
+and its `xpd-optimize` skill holds the steps for a project that uses xpd.
 
 Give each finding its kind, the mechanism that makes the code shorter or
 faster, and whether a rule could have caught it from the syntax alone. Look for
