@@ -8,8 +8,9 @@
 //   t3 workflow start optimize --key my-repo-1 --input '{"project":"/path/to/repo","scope":"src"}'
 //
 // The run changes nothing in the checkout. Each agent works in a worktree of
-// its own, and the run ends with one local branch, optimize/<run>/round-<n>,
-// that holds every change it kept. Nothing is pushed or merged.
+// its own, which the run removes when it ends. The run leaves one local branch,
+// optimize/<run>/round-<n>, that holds every change it kept. Nothing is pushed
+// or merged.
 //
 // Stage      Who does it                         What comes back
 // survey     one agent                           the project's check commands and their results
@@ -33,7 +34,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
 
-const { workflow, step, agent, ask, title, stop } = T3;
+const { workflow, step, agent, ask, title, stop, store } = T3;
 
 // Each stage runs on the cheapest tier whose mistakes the next stage catches, and
 // the agents of one stage take turns over the model families, so that no single
@@ -123,6 +124,14 @@ const Gate = Schema.Struct({
 
 const git = (cwd, ...args) => execFileSync("git", args, { cwd, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"], maxBuffer: 1 << 26 }).trim();
 
+// The worktrees of the repository, each with its path and the branch it has checked out.
+const worktrees = (project) =>
+  git(project, "worktree", "list", "--porcelain")
+    .split("\n\n")
+    .map((block) => ({ path: /^worktree (.+)$/m.exec(block)?.[1], branch: /^branch refs\/heads\/(.+)$/m.exec(block)?.[1] }))
+    .filter((entry) => entry.path);
+const before = (id) => store.entry(`optimize/${id}/worktrees`, Schema.Array(Schema.String));
+
 // The code files of the scope at a commit, with the line count of each.
 const countLines = (project, ref, scope) =>
   git(project, "grep", "-c", "", ref, "--", scope)
@@ -168,19 +177,40 @@ const rules = `Work only in your own worktree. Write no unit test, no documentat
 export default workflow(
   "optimize",
   {
-    version: 2,
+    version: 3,
     payload: Schema.Struct({
       project: Schema.String,
       scope: Schema.optional(Schema.String),
       rounds: Schema.optional(Schema.Number),
     }),
-    // Keep the branch of the last round, and delete the base and the rounds before it.
+    // Remove the worktrees the agents of this run worked in, with their branches, and keep
+    // the branch of the last round. A worktree counts as the run's own when it was not there
+    // before the run, it starts from the run's base, and it holds no uncommitted change.
     onEnd: (payload, end) =>
-      Effect.sync(() => {
-        if (!existsSync(join(payload.project, ".git"))) return;
-        const branches = git(payload.project, "branch", "--list", `optimize/${end.id}/*`, "--format=%(refname:short)").split("\n").filter(Boolean);
-        const last = branches.filter((name) => name.includes("/round-")).sort((a, b) => Number(a.split("-").at(-1)) - Number(b.split("-").at(-1))).at(-1);
-        for (const name of branches) if (name !== last) git(payload.project, "branch", "-D", name);
+      Effect.gen(function* () {
+        const project = payload.project;
+        const prefix = `optimize/${end.id}`;
+        const known = yield* before(end.id).get;
+        yield* Effect.sync(() => {
+          if (!existsSync(join(project, ".git"))) return;
+          const mine = (path) => {
+            try {
+              git(path, "merge-base", "--is-ancestor", `${prefix}/base`, "HEAD");
+              return git(path, "status", "--porcelain") === "";
+            } catch {
+              return false;
+            }
+          };
+          for (const entry of Option.isSome(known) ? worktrees(project) : []) {
+            if (entry.path === project || known.value.includes(entry.path) || !mine(entry.path)) continue;
+            git(project, "worktree", "remove", entry.path);
+            if (entry.branch && !entry.branch.startsWith(prefix)) git(project, "branch", "-D", entry.branch);
+          }
+          const branches = git(project, "branch", "--list", `${prefix}/*`, "--format=%(refname:short)").split("\n").filter(Boolean);
+          const last = branches.filter((name) => name.includes("/round-")).sort((a, b) => Number(a.split("-").at(-1)) - Number(b.split("-").at(-1))).at(-1);
+          for (const name of branches) if (name !== last) git(project, "branch", "-D", name);
+        });
+        yield* before(end.id).delete;
       }),
   },
   Effect.fn(function* (payload, run) {
@@ -194,7 +224,8 @@ export default workflow(
     const start = yield* step(
       "base",
       { returns: Schema.String },
-      Effect.sync(() => {
+      Effect.gen(function* () {
+        yield* before(run.id).set(worktrees(project).map((entry) => entry.path));
         git(project, "branch", "-f", `${prefix}/base`, "HEAD");
         return git(project, "rev-parse", "HEAD");
       }),
