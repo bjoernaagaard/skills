@@ -1,4 +1,0 @@
-interface:
-  display_name: "Create Project Verifier"
-  short_description: "Create a repeatable check for a project outcome"
-  default_prompt: "Use $create-project-verifier to create a repeatable check for a project outcome."

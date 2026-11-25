@@ -34,3 +34,11 @@ During implementation, follow the user's standing test rules. Never add unit, in
 ## Example
 
 In a design discussion about repeated saves, a two-row table can compare one expected disk write with zero and show where each result comes from. Check callers first to see whether a file watcher depends on the write before recommending a cached return. If the request asks for research only, report the current behavior with source paths and the inspected revision, and stop there.
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- A why question with several possible causes, or a choice between options → [issue-tree](../issue-tree/SKILL.md)
+- An implementation with several outcomes that each need a check → [deliver](../deliver/SKILL.md)
+- A phase ends and another person or agent takes the next one → [sbar](../sbar/SKILL.md)

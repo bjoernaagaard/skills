@@ -1,14 +1,8 @@
----
-name: create-project-verifier
-description: Write or update a project skill that checks a user-visible outcome through the real app or command. Use when the user asks for a reusable verifier.
----
-
-# Create a project verifier
+# A check the project keeps
 
 Start with the outcome a user can observe. Find the project's existing verify
 skill, run instructions and supported entry points. Update an existing verifier
-when it covers the same flow. For a one-off check, use
-[verify-change](../verify-change/SKILL.md).
+when it covers the same flow. A check you run once needs no file.
 
 Run the flow from the project's working directory with the tools available to
 its users. Record the input, the exact action and the observation that proves

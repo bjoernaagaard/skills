@@ -24,3 +24,9 @@ Before editing or reviewing prose, read [prose patterns](references/prose-patter
 ## Build and deliver
 
 For LaTeX changes, follow [latex-workflow.md](references/latex-workflow.md). Rebuild after the final source changes. Report changes, verification, and material unresolved limitations; provide the requested deliverables.
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- The choice of an independent reviewer → [model-router](../model-router/SKILL.md)

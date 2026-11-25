@@ -34,3 +34,11 @@ Skip visuals for a single lookup or simple fact, and answer in one sentence inst
 ## Example
 
 Example build times of 18, 72, and 24 seconds for commits A, B, and C answer "Which commit slowed the build?" with a small chart and the takeaway "72 seconds on commit B." Without HTML tools, show the three labeled pairs in Markdown. "How long did commit B take?" earns one sentence. With math rendering off, "72 is four times 18" states the ratio.
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- The length and the closing line of the reply around the view → [reply-repair](../reply-repair/SKILL.md)
+- A breakdown of a question into causes, parts or options → [issue-tree](../issue-tree/SKILL.md)
+- A view for a pull request body → [write-pr-body](../write-pr-body/SKILL.md)

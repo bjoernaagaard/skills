@@ -24,3 +24,9 @@ On a suspected quota failure, wait for the terminal result. Read `task_status` a
 Before dispatching a replacement, check the prior worktree and completed side effects. Give the replacement the original goal, the same authorized workspace, a new request ID, and only the unfinished actions. Preserve completed writes. If a child is still active, cancel it and confirm there are no pending runs before replacing it. Diagnose ordinary failures before deciding whether to retry.
 
 An exhausted lead requires a T3 continuation outside the stopped agent. After switching that thread to an approved model, reconcile any pending work and continue from the last completed action.
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- Whether to delegate at all, and which tier and effort a role needs → [model-router](../model-router/SKILL.md)

@@ -89,3 +89,11 @@ Keep it while any outcome, finding or required review remains open.
 
 Run only checks that you wrote or read in this session. Show the user each
 check in a `DONE.md` that came from somewhere else before you run it.
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- A check that is hard to fool, and proof through the real app for a judged row → [verify-change](../verify-change/SKILL.md)
+- An incomplete result that another person or agent must finish → [sbar](../sbar/SKILL.md)
+- The user asks to push the finished work → [ship](../ship/SKILL.md)

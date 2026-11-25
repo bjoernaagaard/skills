@@ -33,3 +33,13 @@ Never write that nothing is needed and then give an instruction.
 ## Look up the rest
 
 - Why a rule exists, or what the tests showed, before you edit the skill → [references/evidence.md](references/evidence.md)
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- The first sentence of a reply that says where work stands → [bluf](../bluf/SKILL.md)
+- Which steps you take yourself before you reply → [no-handoff](../no-handoff/SKILL.md)
+- Which view fits a change, a trend or a comparison → [visual-explanation](../visual-explanation/SKILL.md)
+- Status words beside each claim → [emphasis](../emphasis/SKILL.md)
+- A handover to a person or an agent who has not seen the session → [sbar](../sbar/SKILL.md)

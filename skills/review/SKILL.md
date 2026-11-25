@@ -34,3 +34,11 @@ say which ones you dropped and why.
 
 Give the confirmed findings, most severe first. Change nothing until the user
 asks for a fix.
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- A finding you can reproduce by running the case → [verify-change](../verify-change/SKILL.md)
+- The user asks you to fix a finding about needless complexity → [simplify-change](../simplify-change/SKILL.md)
+- The review goes into a pull request → [write-pr-body](../write-pr-body/SKILL.md)

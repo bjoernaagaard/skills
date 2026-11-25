@@ -29,3 +29,10 @@ Delegate work that splits into independent pieces whose results come back as a s
 - **T3 Code quota routing.** When the machine has a bstack T3 profile, use [setup-bstack](../setup-bstack/SKILL.md) to select an approved target and handle quota failures.
 
 - **Independent review.** Give a fresh reviewer the goal, artifact and checks. Withhold the author's transcript and verdict. For consequential work prefer another authorized model family at Main or Top. With one family available, use a fresh session in that family. If the host cannot start a fresh reviewer, run the checks yourself and disclose that independent review was unavailable. If the user required a particular reviewer, report the unmet requirement. Stay within the providers authorized for the project.
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- The review itself, once the reviewer is chosen → [review](../review/SKILL.md)
+- A task split into rows for several workers → [deliver](../deliver/SKILL.md)

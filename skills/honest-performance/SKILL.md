@@ -70,3 +70,11 @@ infer optimality or production readiness from a baseline win. Include relevant
 correctness evidence, delivered state, evidence locations, and limitations.
 When execution is unavailable, finish useful analysis or a requested harness
 and mark performance unverified.
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- Proof that a retained change still behaves correctly → [verify-change](../verify-change/SKILL.md)
+- The measurement shows work the code does not need → [simplify-change](../simplify-change/SKILL.md)
+- Several possible causes of a slowdown → [issue-tree](../issue-tree/SKILL.md)

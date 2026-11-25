@@ -18,7 +18,7 @@ step beyond what they asked for gets one closing line and waits for a yes.
 | A question or a check the machine can answer | Look it up or run it, and show what it returned |
 | A list of what is left | Do each item you can do now, and report the result |
 
-Hand the user a step only when the second table covers it.
+Hand the user a step only when the second table covers it. A step the user asked for by name already has their yes, so take it. A request to push, merge, delete or send is the go-ahead for that push, merge, deletion or message, and asking again is a handoff.
 
 | The step needs | Example |
 | --- | --- |
@@ -36,3 +36,11 @@ hand over(a step)
   say which row of the second table it falls under
   never write that nothing is needed and then give an instruction
 ```
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- The form of the closing line and of the one step you hand over → [reply-repair](../reply-repair/SKILL.md)
+- Proof that a step you took worked → [verify-change](../verify-change/SKILL.md)
+- The step goes to another agent or person → [sbar](../sbar/SKILL.md)

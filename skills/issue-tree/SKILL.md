@@ -55,3 +55,10 @@ Next: compare visitors, form starts and form finishes for the two weeks.
 Keep the tree in the last message of the turn. When a later reply in the same
 turn replaces your answer, carry the tree into it, because the reader sees
 only the last message.
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- A leaf that needs an investigation of a codebase or a system → [research-design-implement](../research-design-implement/SKILL.md)
+- A leaf about speed, memory or cost → [honest-performance](../honest-performance/SKILL.md)

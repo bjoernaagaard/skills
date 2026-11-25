@@ -1,6 +1,6 @@
 ---
 name: verify-change
-description: Prove a change by running it, choose a test that is hard to fool, and keep checks honest. Use before you say a change works, before a commit or a pull request, when a test fails or fails only some of the time, when you are about to write a test, or when the user says "verify", "prove it" or types /verify-change. Stays on for the rest of the session.
+description: Prove a change by running it, choose a test that is hard to fool, and keep checks honest. Use before you say a change works, before a commit or a pull request, when a test fails or fails only some of the time, when you are about to write a test, when the user asks for a reusable verifier for a project, or when the user says "verify", "prove it" or types /verify-change. Stays on for the rest of the session.
 ---
 
 # Proof that a change works
@@ -51,4 +51,14 @@ Write a test file only when the user asks for one or the project already has tes
 
 ## Look up the rest
 
+- The user asks for a reusable verifier, a check of a user flow that the project keeps as a skill → [references/project-verifier.md](references/project-verifier.md)
 - Why each rule exists → [How the Claude Code team thinks about verification](https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/)
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- A claim about speed, memory or cost → [honest-performance](../honest-performance/SKILL.md)
+- A task with several outcomes that each need a check → [deliver](../deliver/SKILL.md)
+- A second look from a fresh agent → [review](../review/SKILL.md)
+- The proof goes into a pull request → [write-pr-body](../write-pr-body/SKILL.md)

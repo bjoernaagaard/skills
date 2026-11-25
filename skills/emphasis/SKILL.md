@@ -55,3 +55,11 @@ Follow each badge for a problem or an ask with the one fact the reader needs, in
 ## What to leave out
 
 The program that shows the reply draws it, and a reply cannot change that. Leave out terminal color codes, HTML, badge images, and icon font glyphs. Do not run a tool only to decorate a reply. Bold only the few terms a reader scans for, since bold on every noun hides the badges.
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- The length, the order and the closing line of a reply → [reply-repair](../reply-repair/SKILL.md)
+- Whether a step is the user's or yours, before you write **[Needs you]** → [no-handoff](../no-handoff/SKILL.md)
+- The evidence behind **[Passed]** or **[Verified]** → [verify-change](../verify-change/SKILL.md)

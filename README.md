@@ -2,7 +2,9 @@
 
 I use these skills in Antigravity, Claude Code and Codex to work with Git, check code changes, and write clear replies.
 
-Use [$bmode](skills/bmode/SKILL.md) to apply the working conventions without hooks. It starts with no-handoff and emphasis, then loads installed companions when the task calls for them. For a selective installation, the skill links to its companions.
+Use [$bmode](skills/bmode/SKILL.md) to apply the working conventions without hooks. It starts with no-handoff and emphasis, then loads installed companions when the task calls for them. 
+
+Each skill ends with a list of related skills and the case each one covers, so one skill leads to the next. A link works when both skills are installed, and each skill also works alone.
 
 ## Prompts
 
@@ -29,8 +31,7 @@ Use [$bmode](skills/bmode/SKILL.md) to apply the working conventions without hoo
 | [setup-bstack](skills/setup-bstack/SKILL.md) | Set approved delegate models and quota fallbacks in T3 Code. |
 | [honest-performance](skills/honest-performance/SKILL.md) | Measure performance and check a claimed speedup. |
 | [simplify-change](skills/simplify-change/SKILL.md) | Remove code a change doesn't need. |
-| [verify-change](skills/verify-change/SKILL.md) | Run the changed feature and show the result. |
-| [create-project-verifier](skills/create-project-verifier/SKILL.md) | Write repeatable steps for checking a project through its app or command. |
+| [verify-change](skills/verify-change/SKILL.md) | Run the changed feature and show the result, or save the check as a verifier the project keeps. |
 | [session-pickup](skills/session-pickup/SKILL.md) | Recover where a task stopped and what remains. |
 | [deliver](skills/deliver/SKILL.md) | Define what counts as done and check each deliverable. |
 | [no-handoff](skills/no-handoff/SKILL.md) | Have the agent finish the steps it can take itself. |

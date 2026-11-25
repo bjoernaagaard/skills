@@ -33,3 +33,10 @@ git rebase origin/HEAD
 
 Give the old base, the new base, how many commits you replayed, how you
 resolved each conflict, and confirm that the uncommitted changes are back.
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- The user asks to push the rebased work → [ship](../ship/SKILL.md)
+- The user asks for clean commits → [restack](../restack/SKILL.md)

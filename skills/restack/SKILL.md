@@ -41,3 +41,10 @@ before you report.
 
 List the new commits, oldest first, with one line on what each one does, and
 confirm the tree matches the original.
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- The base is behind the remote → [rebase](../rebase/SKILL.md)
+- The user asks to push the new commits → [ship](../ship/SKILL.md)

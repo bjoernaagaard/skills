@@ -10,7 +10,8 @@ For direct delivery, use the authorized default branch. For branch-based deliver
 work on the task branch and push only to that branch when authorized. Treat a
 push, a merge request, a remote merge and a comment as separate actions. Apply
 the environment's approval rule to each. Choose the permitted local branch before
-committing. If publication permission
+committing. A request to ship, or to push to a named branch, already authorizes
+the commit and the push to that destination, so make them without asking again. If publication permission
 is unclear, finish the local work and ask about the exact outstanding action.
 
 ## 1. Commit
@@ -38,7 +39,8 @@ intended result is unclear.
 
 ## 3. Test
 
-Run the project's full test suite on the outgoing commit. If a check fails,
+Run the project's full test suite on the outgoing commit. When the project has
+no suite, prove the change with [verify-change](../verify-change/SKILL.md). If a check fails,
 run the same check in a disposable worktree at the fetched integration base.
 Remove that worktree afterwards. Report a failure present on the base. Fix a
 regression introduced by the change and rerun the suite.

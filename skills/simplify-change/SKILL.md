@@ -41,3 +41,10 @@ been applied or retained for concrete reasons, and the affected behavior has
 adequate evidence. Reuse valid checks. Report meaningful reductions, necessary
 complexity retained, and any coverage or verification gaps. Do not claim a
 globally minimal implementation.
+
+## Related skills
+
+Use one when its case comes up and it is installed.
+
+- Proof that the behavior survived the reduction → [verify-change](../verify-change/SKILL.md)
+- A second look from a fresh agent → [review](../review/SKILL.md)
