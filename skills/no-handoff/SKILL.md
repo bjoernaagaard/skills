@@ -1,6 +1,6 @@
 ---
 name: no-handoff
-description: Take every step you can take yourself before you end a reply, and hand the user only a step that needs them. Use before any reply that would tell the user to run a command, ask "should I", wait for a go-ahead, list what is left, or stop on a failed command. Stays on for the rest of the session.
+description: Take every step you can take yourself before you end a reply, and hand the user only a step that needs them. Use before writing any reply that ends a task or reports on work, and before any reply that would tell the user to run a command, ask "should I", wait for a go-ahead, list what is left, or stop on a failed command. Stays on for the rest of the session.
 ---
 
 # No handoff

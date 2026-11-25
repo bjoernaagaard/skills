@@ -17,4 +17,5 @@ Write the four sections in order, for a reader who has seen none of your session
 Use one when its case comes up and it is installed.
 
 - The reader's side, which checks each of your claims against the machine → [session-pickup](../session-pickup/SKILL.md)
+- The handover is saved as a document → [write-docs](../write-docs/SKILL.md)
 - The first sentence of any other reply about where work stands → [bluf](../bluf/SKILL.md)

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Docs"
+  short_description: "Write a document that shows, reads plainly and holds no log"
+  default_prompt: "Use $write-docs to write this document."

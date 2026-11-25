@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plain Writing"
+  short_description: "Write plain prose a reader understands in one pass"
+  default_prompt: "Use $plain-writing to write this plainly."

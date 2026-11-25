@@ -1,6 +1,6 @@
 ---
 name: emphasis
-description: Make replies easy to scan with bold status badges, evidence beside each claim, and the action each badge calls for. Works with plain Markdown, so it needs no hook, plugin, or special font. Use when the user asks for emphasis, status badges, or scannable replies, or types /emphasis. Stays on for the rest of the session.
+description: Make replies easy to scan with bold status badges, evidence beside each claim, and the action each badge calls for. Use before writing any reply that reports on work, such as a result, a status, a failure or a finished task, and when the user asks for emphasis, status badges, or scannable replies, or types /emphasis. Works with plain Markdown, so it needs no hook, plugin, or special font. Stays on for the rest of the session.
 ---
 
 # Emphasis
@@ -26,7 +26,7 @@ A known word may carry short detail that real output supports, such as **[Passed
 
 ## Where a badge goes
 
-- **Answer first.** Start the reply with the answer or the outcome, then badge the claims under it.
+- **Answer first.** Start the reply with the answer or the outcome, then badge the claims under it. When the reader must do or decide something, the first sentence says what and by when, and progress comes after it.
 - **One badge for each claim.** Put it beside the subject it describes. Use the fewest badges that keep settled work, open work, and required action apart, and state a verdict once.
 - **Every failure, every ask, and every unchecked claim gets one.** A reply that reports work without them hides what is open.
 - **Mark a consequence before the action.** Put **[Costs money]**, **[Destructive]**, or **[Irreversible]** beside the action, and wait for the user where the choice is theirs.
