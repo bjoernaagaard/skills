@@ -31,7 +31,6 @@ Each skill ends with a list of related skills and the case each one covers, so o
 | [setup-bstack](skills/setup-bstack/SKILL.md) | Set approved delegate models and quota fallbacks in T3 Code. |
 | [honest-performance](skills/honest-performance/SKILL.md) | Measure performance and check a claimed speedup. |
 | [simplify-change](skills/simplify-change/SKILL.md) | Remove code a change doesn't need. |
-| [optimize](skills/optimize/SKILL.md) | Make a script or a codebase shorter, simpler and faster in ways its linters cannot see. |
 | [verify-change](skills/verify-change/SKILL.md) | Run the changed feature and show the result, or save the check as a verifier the project keeps. |
 | [session-pickup](skills/session-pickup/SKILL.md) | Recover where a task stopped and what remains. |
 | [deliver](skills/deliver/SKILL.md) | Define what counts as done and check each deliverable. |
