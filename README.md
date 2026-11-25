@@ -40,8 +40,7 @@ Each skill ends with a list of related skills and the case each one covers, so o
 
 | Skill | When to use it |
 | --- | --- |
-| [plain-writing](skills/plain-writing/SKILL.md) | Write plain prose that a reader understands in one pass. |
-| [write-docs](skills/write-docs/SKILL.md) | Write a document that shows with tables and diagrams, reads plainly and holds no log of the work. |
+| [human-writing](skills/human-writing/SKILL.md) | Write any text a person will read, with views where prose would describe, plain prose and no log of the work. |
 | [bluf](skills/bluf/SKILL.md) | Lead with the result or the decision the reader needs to make. |
 | [emphasis](skills/emphasis/SKILL.md) | Make status, evidence, and next steps easy to scan. |
 | [reply-repair](skills/reply-repair/SKILL.md) | Rewrite a reply the reader couldn't act on. |
@@ -85,4 +84,4 @@ codex plugin add codex-emphasis@skills-codex
 
 Review the hook in `/hooks` and start a new session. If your workplace blocks plugins, you can install the `no-handoff` and `emphasis` skills with the skills command above.
 
-[MIT license](LICENSE). The plain-writing skill is based on [docwriter-org/plain-writing-skill](https://github.com/docwriter-org/plain-writing-skill), and its license is in [LICENSE.txt](skills/plain-writing/LICENSE.txt).
+[MIT license](LICENSE)

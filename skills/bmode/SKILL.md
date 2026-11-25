@@ -23,7 +23,7 @@ is missing, use the guidance here.
 | A second look, or less code | [review](../review/SKILL.md) or [simplify-change](../simplify-change/SKILL.md) |
 | Pull request wording | [write-pr-body](../write-pr-body/SKILL.md), and a draft stays in chat |
 | Delivery the user asked for | [ship](../ship/SKILL.md) and the project's branch rules |
-| A document a person will read | [write-docs](../write-docs/SKILL.md) |
+| Text a person will read, such as a document | [human-writing](../human-writing/SKILL.md) |
 | Work you hand to someone else | [sbar](../sbar/SKILL.md) |
 | A reply about where work stands | [bluf](../bluf/SKILL.md), and [reply-repair](../reply-repair/SKILL.md) when the reader could not use the last reply |
 

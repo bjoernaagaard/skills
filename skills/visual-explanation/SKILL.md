@@ -41,5 +41,5 @@ Use one when its case comes up and it is installed.
 
 - The length and the closing line of the reply around the view → [reply-repair](../reply-repair/SKILL.md)
 - A breakdown of a question into causes, parts or options → [issue-tree](../issue-tree/SKILL.md)
-- A document saved to a file, such as a README or a guide → [write-docs](../write-docs/SKILL.md)
+- A document saved to a file, such as a README or a guide → [human-writing](../human-writing/SKILL.md)
 - A view for a pull request body → [write-pr-body](../write-pr-body/SKILL.md)

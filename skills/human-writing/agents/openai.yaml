@@ -1,0 +1,4 @@
+interface:
+  display_name: "Human Writing"
+  short_description: "Write text a person understands in one pass"
+  default_prompt: "Use $human-writing to write this."
