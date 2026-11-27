@@ -2,5 +2,3 @@ interface:
   display_name: "Bmode"
   short_description: "Apply portable working conventions to this task"
   default_prompt: "Use the bmode skill to apply portable working conventions to this task."
-policy:
-  allow_implicit_invocation: false
