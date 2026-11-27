@@ -1,6 +1,6 @@
 ---
 name: human-writing
-description: Write or edit human-facing text (docs, README, guide, report, design note, handover, email, commit, PR, or long reply) so one pass is enough. Uses tables and diagrams over prose, plain literal language, and current state with no work log. Not for code.
+description: Write or edit standalone human-facing prose (docs, README, guide, email, or article) so one pass is enough, using tables and plain literal language with no work log. Not for code, PR bodies (write-pr-body), handovers (sbar), status updates (bluf), or technical designs (research-design-implement).
 ---
 
 # Human writing

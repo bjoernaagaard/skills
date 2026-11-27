@@ -1,6 +1,6 @@
 ---
 name: model-router
-description: Decide whether to hand work to a subagent, and which model and effort level each subagent gets. Use before starting, delegating to, or configuring a subagent, and when choosing a model or effort level for a task.
+description: Decide whether to hand work to a subagent, and which model and effort level each subagent gets. Use when asked to choose a model, effort level, or delegation split; skip when review or setup-bstack is already the requested task.
 ---
 
 # Model router

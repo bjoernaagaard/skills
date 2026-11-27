@@ -1,6 +1,6 @@
 ---
 name: visual-explanation
-description: Explain a system, change, trend, or tradeoff using the smallest visual (table, tree, diff, pseudocode, Mermaid diagram, or inline HTML chart). Use proactively even unasked. Skip single lookups and live CSS inspection.
+description: Explain a system, change, trend, or tradeoff using the smallest visual (table, tree, diff, pseudocode, Mermaid diagram, or inline HTML chart). Use for direct explanation or chart requests; skip single lookups, live CSS inspection, and tasks owned by honest-performance, issue-tree, or research-design-implement.
 ---
 
 # Visual explanation

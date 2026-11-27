@@ -1,6 +1,6 @@
 ---
 name: verify-change
-description: Prove a change by running the real app or command, choose hard-to-fool tests, fix flaky checks, or build a reusable project verifier. Use before claiming done, committing, or on /verify-change. Stays on.
+description: Prove a change by running the real app or command, choose hard-to-fool tests, fix flaky checks, or build a reusable project verifier. Use when asked to verify, prove, or test a change, or on /verify-change; skip for routine edits, local commits, or skills that already run checks (bmode, deliver, ship, rebase, restack).
 ---
 
 # Proof that a change works

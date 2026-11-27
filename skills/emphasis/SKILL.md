@@ -1,6 +1,6 @@
 ---
 name: emphasis
-description: Format work-status replies with plain-Markdown bold status badges, evidence beside each claim, and next actions. Use for status reports, failures, finished tasks, or /emphasis. Stays on for the session.
+description: Format work-status replies with plain-Markdown bold status badges ([Done], [Failed], [Needs you]), evidence beside each claim, and next actions. Use when asked for badged work status or /emphasis; not for executive BLUF updates (bluf) or TLDR reply repair (reply-repair).
 ---
 
 # Emphasis

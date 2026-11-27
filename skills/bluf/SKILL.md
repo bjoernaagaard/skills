@@ -1,6 +1,6 @@
 ---
 name: bluf
-description: Lead status updates, reports, summaries, and "where is this at" replies with what the reader must do or decide and by when (BLUF).
+description: Lead executive status updates, summaries, and "where is this at" replies with what the reader must do or decide and by when (BLUF). Not for badged work-status replies (emphasis) or repairing a confusing reply (reply-repair).
 ---
 
 # Bottom line up front

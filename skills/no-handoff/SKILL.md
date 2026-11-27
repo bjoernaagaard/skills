@@ -1,6 +1,6 @@
 ---
 name: no-handoff
-description: Finish every authorized step yourself before replying and hand the user only steps requiring their hands. Use before ending work, listing leftovers, or asking "should I". Stays on for the session.
+description: Finish every authorized step yourself before replying and hand the user only steps requiring their hands. Use when asked not to hand steps back or to finish everything possible before replying; skip for routine single-step tasks or skills that already own completion (bmode, deliver, ship).
 ---
 
 # No handoff
