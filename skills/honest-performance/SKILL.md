@@ -30,7 +30,7 @@ Read [measurement and evidence](references/MEASUREMENT.md) before running or cha
 
 Retain changes with a plausible mechanism and evidence for the claimed benefit. Check material tradeoffs such as memory, startup, tail latency, complexity, and larger inputs. Expand investigation only when it could change correctness, target attainment, the retained implementation, claim credibility, or the user's decision. Reuse valid evidence, ensure results describe the delivered code, and keep abandoned experiments distinct from retained changes.
 
-Read [visual-explanation](../visual-explanation/SKILL.md) when installed. Answer the question first, then show a comparison table with absolute measurements, units, comparator, and observed or supplied status (or an inline HTML chart in T3 Code for trends and distributions). Keep surrounding prose to one or two sentences, and skip the table only when a single number answers the question.
+Read [visual-explanation](../visual-explanation/SKILL.md) when installed. Answer the question first, then show a comparison table with absolute measurements, units, comparator, and observed or supplied status (or an inline HTML chart when the host supports it, for trends and distributions). Keep surrounding prose to one or two sentences, and skip the table only when a single number answers the question.
 
 | Metric | Baseline | Candidate | Delta | Evidence |
 | --- | --- | --- | --- | --- |
@@ -43,7 +43,7 @@ State separately whether improvement is verified, requirements are met, and a co
 
 Use one when its case comes up and it is installed.
 
-- Picking a comparison table or T3 Code HTML chart for measurements → [visual-explanation](../visual-explanation/SKILL.md)
+- Picking a comparison table or inline HTML chart for measurements → [visual-explanation](../visual-explanation/SKILL.md)
 - Proof that a retained change still behaves correctly → [verify-change](../verify-change/SKILL.md)
 - The measurement shows work the code does not need → [simplify-change](../simplify-change/SKILL.md)
 - Several possible causes of a slowdown → [issue-tree](../issue-tree/SKILL.md)

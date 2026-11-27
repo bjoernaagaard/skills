@@ -9,7 +9,7 @@ Start from the exact source the request identifies. Resolve the repository, base
 
 ## Write for the reviewer
 
-Read [visual-explanation](../visual-explanation/SKILL.md) when installed. Lead with why the change exists and the behavior reviewers can expect. Use portable GitHub Markdown, never T3 `html_render`, for PR content. For any multi-file or behavioral change, show a focused `diff`, compact Markdown table, or small Mermaid diagram instead of paragraphs, and skip a visual only for a trivial single-line change. Label illustrative code as a behavior sketch.
+Read [visual-explanation](../visual-explanation/SKILL.md) when installed. Lead with why the change exists and the behavior reviewers can expect. Use portable GitHub Markdown, never inline HTML renders, for PR content. For any multi-file or behavioral change, show a focused `diff`, compact Markdown table, or small Mermaid diagram instead of paragraphs, and skip a visual only for a trivial single-line change. Label illustrative code as a behavior sketch.
 
 Include consequential risks, migrations, or rollout steps when needed. Report checks for the exact version described, with command and result when known, and label missing, stale, or supplied evidence. Use [verify-change](../verify-change/SKILL.md) when asked to prove the change.
 
@@ -20,9 +20,9 @@ Include consequential risks, migrations, or rollout steps when needed. Report ch
 | Preview wording | Show the requested excerpt or layout in chat. Make zero PR writes. |
 | Draft in chat | Return the requested title or body as copyable GitHub Markdown. Make zero PR writes. |
 | Apply an authorized edit | Confirm repository, PR number, and current head. Update only requested fields while keeping untouched sections. Read back saved fields before retrying an uncertain write. |
-| Publish or open a PR | Reuse an existing matching PR for the resolved repository, base, and head. Use [ship](../ship/SKILL.md) for authorized branch preparation. Confirm push is in scope before calling T3 PR creation, then read back the created PR. |
+| Publish or open a PR | Reuse an existing matching PR for the resolved repository, base, and head. Use [ship](../ship/SKILL.md) for authorized branch preparation. Confirm push is in scope before creating the PR, then read back the created PR. |
 
-Use T3 PR tools where available and link PRs only after an authorized live PR action. Preview, draft, or edit permission grants no authority to stage, commit, push, comment, merge, or upload media. Each external action needs explicit authorization and then proceeds without asking again, subject to host permissions. Route independent critique to [review](../review/SKILL.md).
+Use the host's pull request tools where available and link PRs only after an authorized live PR action. Preview, draft, or edit permission grants no authority to stage, commit, push, comment, merge, or upload media. Each external action needs explicit authorization and then proceeds without asking again, subject to host permissions. Route independent critique to [review](../review/SKILL.md).
 
 ## Example
 

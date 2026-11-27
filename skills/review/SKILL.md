@@ -12,9 +12,9 @@ Have a fresh subagent review the current changes, then report what it found.
 Pick a fresh reviewer with [model-router](../model-router/SKILL.md) on the requested host, or disclose unavailability per model-router. Give the reviewer:
 
 - The goal in the user's words.
-- The comparison base from the request or branch policy, comparing the working tree and untracked files to its merge base with HEAD.
+- The comparison base from the request or branch policy, comparing the working tree and untracked files to its merge base with HEAD. When reviewing uncommitted changes, share the parent checkout or pass the diff directly rather than using a clean isolated checkout.
 - Scope: correctness bugs, breaking changes, security problems, and needless maintenance complexity.
-- Output: each finding's file and line, concrete triggering input or state, and confidence.
+- Output: each finding's file and line as a clickable `path:line` reference, concrete triggering input or state, and confidence.
 
 Withhold your opinion, and forbid file edits.
 

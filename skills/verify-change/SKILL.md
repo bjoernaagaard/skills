@@ -21,7 +21,9 @@ A change is done when someone ran it and saw it work. Apply the rules below to e
    | A bug fix | The same case before the fix and after it |
    | A rewrite or a migration | The old and the new code on the same input, with the differences shown |
 
-3. **Show the evidence.** Give the command and its output, or the screenshot. Name each part you could not run, and say why.
+   When the host provides managed browser or device tools, use them instead of raw shell wrappers so the user can watch live, and follow host rules on when to open a shared browser.
+
+3. **Show the evidence.** Give the command and its output, or embed the screenshot when the host renders local images. Name each part you could not run, and say why.
 4. **Prove the last version.** An edit after the proof makes the proof old, so run it again.
 5. **Stop after three rounds.** When a check still fails after three rounds of fixes, stop and show the user the failure.
 

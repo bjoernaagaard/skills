@@ -54,13 +54,14 @@ example that contains the thing it looks for.
 
 Do the work yourself, or hand rows to workers through
 [model-router](../model-router/SKILL.md). Give each worker its rows, the
-paths it owns and the checks, and give no two workers the same path. Only
+paths it owns and the checks inline in its brief (workers in isolated checkouts
+cannot read an untracked `DONE.md`), and give no two workers the same path. Only
 you edit `DONE.md`. Keep the rows that test how the parts fit together.
 
 ## Grade the result
 
 Select one fresh grader using the independent review rule in
-[model-router](../model-router/SKILL.md). Give it the request, `DONE.md` and the result, and do not give it
+[model-router](../model-router/SKILL.md). Give it the request, `DONE.md` (inline if it runs in an isolated checkout) and the result, and do not give it
 your transcript or your opinion. The grader edits no file. Ask it to run
 every check, to judge each "judged" row, to say whether each check proves
 its whole outcome, and to name the outcomes the request implies but

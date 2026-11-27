@@ -5,7 +5,7 @@ description: Reconstruct where a task stopped from its handover, thread and curr
 
 # Pick up a session
 
-Read the named handover or thread and project instructions within authorized scope to recover the goal, decisions, permissions, last verified result, and open work. When prior history is unavailable, start from project evidence and label missing context.
+Read the named handover or thread and project instructions within authorized scope to recover the goal, decisions, permissions, last verified result, and open work. When continuing a thread whose earlier turns were summarized or omitted (such as after a provider switch or context handoff), pull the omitted turns with the host's thread-reading tool when available before re-running finished work. When prior history is unavailable, start from project evidence and label missing context.
 
 Check machine, checkout, branch, working tree, commits, files, and running jobs against the handover. Read finished job results before starting another, and recheck stale or unsupported claims. Distinguish what you checked now from handover claims, and carry approvals forward only for the action and destination they covered.
 

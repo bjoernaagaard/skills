@@ -1,6 +1,6 @@
 ---
 name: visual-explanation
-description: Explain a system, change, trend, or tradeoff using the smallest visual (table, tree, diff, pseudocode, Mermaid diagram, or T3 Code HTML chart). Use proactively even unasked. Skip single lookups and live CSS inspection (/explain-interface).
+description: Explain a system, change, trend, or tradeoff using the smallest visual (table, tree, diff, pseudocode, Mermaid diagram, or inline HTML chart). Use proactively even unasked. Skip single lookups and live CSS inspection (/explain-interface).
 ---
 
 # Visual explanation
@@ -19,21 +19,21 @@ Skip visuals for a single lookup or simple fact, and answer in one sentence inst
 | Branching logic or state transitions | Pseudocode |
 | Structural before and after change | Focused `diff` with enough surrounding context |
 | Request flow or messages between parts | Small Mermaid diagram |
-| Numeric trend, spike, magnitude, or spatial layout | Self-contained HTML chart or visual in T3 Code |
-| Formula or equation | LaTeX math as `$…$` or `$$…$$`, which T3 Code typesets when Render math is on |
-| Screenshots or image files side by side | HTML page in T3 Code that places the local images by file path |
+| Numeric trend, spike, magnitude, or spatial layout | Self-contained inline HTML chart or visual when the host supports HTML rendering |
+| Formula or equation | LaTeX math as `$…$` or `$$…$$` when the host renders math |
+| Screenshots or image files side by side | Inline HTML page placing the local images by file path, or embedded image links |
 
-## Use the right T3 surface
+## Use the right visual surface
 
-- **Inline T3 thread HTML.** When a chart, spatial layout, or interactive view earns HTML in T3 Code, build self-contained HTML with inline styles and scripts. Call `html_preview` first and inspect the rendered PNG, height, and console output for legibility, clipping, narrow layout, and errors. When the native `html_render` tool is exposed, send the checked HTML with it. Never start a server or use `preview_*` browser tools to show an explanation.
-- **Check the receipt.** Check the `html_render` receipt. Report the preview or the receipt only when one shows a problem. They show what was sent, not what the reader's client displays.
-- **Fallbacks.** If `html_preview` or `html_render` is unavailable, disabled, or fails, report the tool limit and present the labeled values or relationship in Markdown instead of stalling or working around tool permissions. When math rendering is off, write an essential formula in plain words.
-- **Other requested surfaces.** When the user asks for an image to post, send, or use elsewhere, write a `.png` file and return its path instead of calling `html_render`. When the user names another surface, use it within task scope.
+- **Inline HTML renders.** When a chart, spatial layout, or interactive view earns HTML and the host exposes an inline HTML preview and render tool, build self-contained HTML with inline styles and scripts. Preview it first and inspect the rendered image, height, and console output for legibility, clipping, narrow layout, and errors before publishing it inline. Never start a local server or use a shared browser tab to show an explanation.
+- **Check the receipt.** Check the render tool's receipt. Report the preview or the receipt only when one shows a problem. They show what was sent, not what the reader's client displays.
+- **Fallbacks.** If inline HTML rendering is unavailable, disabled, or fails, report the tool limit and present the labeled values or relationship in Markdown instead of stalling or working around tool permissions. When math rendering is off, write an essential formula in plain words.
+- **Other requested surfaces.** When the user asks for an image to post, send, or use elsewhere, write a `.png` file and return its path instead of rendering inline HTML. When the user names another surface, use it within task scope.
 - **Scope and routing.** An explanation request authorizes inline delivery in the current thread. Controlling a browser or device, writing files to disk, or sharing externally each requires matching task scope. Skip inspection of how a live web interface or CSS effect was built, or suggest `/explain-interface` when installed.
 
 ## Example
 
-Takeaway for "Which commit slowed the build?" (example data): commit B jumped to **72 s**, four times commit A. In T3 Code, render an inline HTML bar chart; without HTML tools, show the labeled table:
+Takeaway for "Which commit slowed the build?" (example data): commit B jumped to **72 s**, four times commit A. When the host supports inline HTML rendering, show an inline bar chart; otherwise show the labeled table:
 
 | Commit | Build time (example) | Change vs. A |
 | --- | --- | --- |

@@ -22,7 +22,7 @@ Hand the user a step only when the second table covers it. A step the user asked
 
 | The step needs | Example |
 | --- | --- |
-| A credential or admin rights you don't have | A password, a token, an elevated shell |
+| A credential or admin rights you don't have | A password, a token, or an elevated shell when the host has no private secret-request tool; if it has one, request the secret there and finish the step yourself |
 | The user's hands | A passkey, a code from their phone, a click in an app |
 | The user's money | A paid plan, a purchase |
 | The deletion of the user's data | Files, branches or records you did not create in this task |
