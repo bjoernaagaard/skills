@@ -1,4 +1,4 @@
-Use $bmode to audit code comments in the paths I name, or in this repository
+Use the bmode skill to audit code comments in the paths I name, or in this repository
 if I give no paths. Account for every comment in scope, even if this change
 removes only one batch. Preserve runtime behavior. Read the repository’s
 instructions and locate its lint command, tracker, decision records and skills.
@@ -36,11 +36,11 @@ comment should pass. Make the error name the location and fix.
 a description that says when to use it, the scan and lint commands, and how
 to apply the same exemptions and retire allowances in the next batch. Include
 the project’s issue and ADR conventions. Add `agents/openai.yaml` with a display name,
-short description and a default prompt invoking `$delete-comment`. Verify
+short description and a default prompt invoking the `delete-comment` skill. Verify
 discovery and show the invocation on this host. A repeat run on an unchanged
 scope should reuse issues and ADRs and leave the tree unchanged.
 
-**Prove and report.** Use $verify-change. Run the real lint command on a
+**Prove and report.** Use the verify-change skill. Run the real lint command on a
 disposable edit: it must reject a new ordinary comment, including a
 one-for-one replacement, and accept a required directive and a comment marker
 inside a string. Remove the probe and run the normal checks on the final tree.

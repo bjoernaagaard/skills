@@ -1,4 +1,4 @@
 interface:
   display_name: "SBAR"
   short_description: "Write a concise handover with context and next steps"
-  default_prompt: "Use $sbar to prepare a handover for this work."
+  default_prompt: "Use the sbar skill to prepare a handover for this work."

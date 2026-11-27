@@ -7,8 +7,6 @@ description: Format work-status replies with plain-Markdown bold status badges, 
 
 A status badge is a known word in bold brackets, such as **[Done]**, beside the claim it describes. Write badges in every reply for the rest of the session, progress updates included. Stop when the user asks you to stop. The user's requested format and the project's own instructions win where they differ from this skill.
 
-If the session's instructions already define a pill form such as `[[Done]]`, the machine has a renderer for it. Use that form and its word list instead of the badges below.
-
 ## The words
 
 Use exactly these words, so the same state always reads the same. Do not invent a status word.

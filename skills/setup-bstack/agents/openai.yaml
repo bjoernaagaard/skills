@@ -1,4 +1,4 @@
 interface:
   display_name: "Set up bstack"
   short_description: "Configure native T3 delegate fallback routes"
-  default_prompt: "Use $setup-bstack to configure my T3 Code delegate models and quota fallbacks."
+  default_prompt: "Use the setup-bstack skill to configure my T3 Code delegate models and quota fallbacks."

@@ -1,4 +1,4 @@
-Use $bmode on this repository. Read the Git history, past bug fixes, and
+Use the bmode skill on this repository. Read the Git history, past bug fixes, and
 available review comments. Start with the best-evidenced recurring mistake.
 Name two occurrences and the constraint both violated.
 

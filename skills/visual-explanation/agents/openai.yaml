@@ -1,4 +1,4 @@
 interface:
   display_name: "Visual Explanation"
   short_description: "Explain systems, changes, trends, or tradeoffs visually"
-  default_prompt: "Use $visual-explanation to explain this clearly with the smallest useful visual."
+  default_prompt: "Use the visual-explanation skill to explain this clearly with the smallest useful visual."

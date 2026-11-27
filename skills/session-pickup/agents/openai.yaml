@@ -1,4 +1,4 @@
 interface:
   display_name: "Session Pickup"
   short_description: "Recover the verified state of interrupted work"
-  default_prompt: "Use $session-pickup to recover the verified state of interrupted work."
+  default_prompt: "Use the session-pickup skill to recover the verified state of interrupted work."

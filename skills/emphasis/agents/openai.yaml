@@ -1,4 +1,4 @@
 interface:
   display_name: "Emphasis"
   short_description: "Make status and next actions easy to scan"
-  default_prompt: "Use $emphasis to make status and next actions easy to scan."
+  default_prompt: "Use the emphasis skill to make status and next actions easy to scan."

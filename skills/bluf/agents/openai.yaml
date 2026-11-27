@@ -1,4 +1,4 @@
 interface:
   display_name: "Bottom Line Up Front"
   short_description: "State the decision or next action before the details"
-  default_prompt: "Use $bluf to state the result or next action first."
+  default_prompt: "Use the bluf skill to state the result or next action first."

@@ -1,4 +1,4 @@
 interface:
   display_name: "Deliver"
   short_description: "Finish every part of a task and prove it with checks"
-  default_prompt: "Use $deliver to finish this task completely and prove each part."
+  default_prompt: "Use the deliver skill to finish this task completely and prove each part."

@@ -1,4 +1,4 @@
 interface:
   display_name: "No Handoff"
   short_description: "Finish authorized work before handing it back"
-  default_prompt: "Use $no-handoff to finish authorized work before handing it back."
+  default_prompt: "Use the no-handoff skill to finish authorized work before handing it back."

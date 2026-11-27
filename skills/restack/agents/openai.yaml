@@ -1,4 +1,4 @@
 interface:
   display_name: "Restack"
   short_description: "Rewrite the branch into reviewable commits"
-  default_prompt: "Use $restack to turn my changes into logical, easy-to-review commits."
+  default_prompt: "Use the restack skill to turn my changes into logical, easy-to-review commits."

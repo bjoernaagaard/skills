@@ -1,4 +1,4 @@
 interface:
   display_name: "Rebase"
   short_description: "Rebase onto origin/HEAD and keep uncommitted work"
-  default_prompt: "Use $rebase to rebase this branch onto the latest origin/HEAD."
+  default_prompt: "Use the rebase skill to rebase this branch onto the latest origin/HEAD."

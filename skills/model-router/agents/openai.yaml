@@ -1,4 +1,4 @@
 interface:
   display_name: "Model Router"
   short_description: "Choose a suitable model and effort for delegated work"
-  default_prompt: "Use $model-router to choose a model for this task."
+  default_prompt: "Use the model-router skill to choose a model for this task."

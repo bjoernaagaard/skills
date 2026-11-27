@@ -1,6 +1,0 @@
-{
-  "name": "handoff-gate",
-  "version": "0.1.1",
-  "description": "Stops a reply that hands the user a step the agent can take, and sends the agent back to take it.",
-  "license": "MIT"
-}

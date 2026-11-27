@@ -2,7 +2,7 @@
 
 I use these skills in Antigravity, Claude Code and Codex to work with Git, check code changes, and write clear replies.
 
-Use [$bmode](skills/bmode/SKILL.md) to apply the working conventions without hooks. It starts with no-handoff and emphasis, then loads installed companions when the task calls for them. 
+Use [bmode](skills/bmode/SKILL.md) to apply the working conventions. It starts with no-handoff and emphasis, then loads installed companions when the task calls for them.
 
 Each skill ends with a list of related skills and the case each one covers, so one skill leads to the next. A link works when both skills are installed, and each skill also works alone.
 
@@ -54,7 +54,7 @@ Each skill ends with a list of related skills and the case each one covers, so o
 npx skills add bjoernaagaard/skills
 ```
 
-If you select individual skills, install `rebase` with `ship`. To use a skill, type its name, such as `$bluf` in Codex or `/bluf` in Claude Code.
+If you select individual skills, install `rebase` with `ship`. To use a skill, name it in your prompt (for example, "use bluf") or select it in your host's skill picker.
 
 Antigravity loads the skills when you open this repository. To use them in
 other projects, install them for your account:
@@ -65,23 +65,5 @@ npx skills add bjoernaagaard/skills --global --agent antigravity --skill '*' --y
 
 In an open Antigravity CLI session, run `/skills reload`, then type `/bmode`
 or another skill name.
-
-## Install an optional plugin
-
-In Claude Code, `handoff-gate` asks the agent to continue when it hands you work it can do itself. The `emphasis` plugin adds color to status labels. Run the command for the plugin you want inside Claude Code.
-
-```text
-/plugin install handoff-gate --marketplace bjoernaagaard/skills
-/plugin install emphasis --marketplace bjoernaagaard/skills
-```
-
-In Codex, install `codex-emphasis` to load the emphasis skill automatically.
-
-```sh
-codex plugin marketplace add bjoernaagaard/skills
-codex plugin add codex-emphasis@skills-codex
-```
-
-Review the hook in `/hooks` and start a new session. If your workplace blocks plugins, you can install the `no-handoff` and `emphasis` skills with the skills command above.
 
 [MIT license](LICENSE)

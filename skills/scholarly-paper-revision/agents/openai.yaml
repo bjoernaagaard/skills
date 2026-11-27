@@ -1,4 +1,4 @@
 interface:
   display_name: "Scholarly Paper Revision"
   short_description: "Revise scholarly manuscripts and teaching material"
-  default_prompt: "Use $scholarly-paper-revision to revise this manuscript within its stated scope."
+  default_prompt: "Use the scholarly-paper-revision skill to revise this manuscript within its stated scope."
