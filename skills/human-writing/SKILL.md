@@ -1,6 +1,6 @@
 ---
 name: human-writing
-description: Write any text a person will read so that they understand it in one pass. Use before writing or editing a document, a README, a guide, a report, a design note, a handover, an email, a commit message, a pull request description or a longer reply, and when the user asks to write, document, explain, simplify, tighten, reword or clean up text. Shows with tables and diagrams where prose would describe, picks the structure for the purpose, writes plain literal prose with none of the habits of machine writing, and keeps a document a description of how things are now, with no log of the work. Does not apply to code, only to the words around it.
+description: Write or edit human-facing text (docs, README, guide, report, design note, handover, email, commit, PR, or long reply) so one pass is enough. Uses tables and diagrams over prose, plain literal language, and current state with no work log. Not for code.
 ---
 
 # Human writing

@@ -5,29 +5,17 @@ description: Reconstruct where a task stopped from its handover, thread and curr
 
 # Pick up a session
 
-Read the named handover or thread and the instructions for its project. Recover
-the requested outcome, decisions, permissions, last verified result and open
-work. Use only history in the authorized scope. If the prior thread is
-unavailable, start from the project evidence and label missing context.
+Read the named handover or thread and project instructions within authorized scope to recover the goal, decisions, permissions, last verified result, and open work. When prior history is unavailable, start from project evidence and label missing context.
 
-Check the machine, checkout, branch and working tree. Compare the handover
-with the relevant commits, files and running jobs. If a named job finished,
-read its result before starting another. Recheck a claim when the artifact
-changed or the handover lacks evidence for the next decision.
+Check machine, checkout, branch, working tree, commits, files, and running jobs against the handover. Read finished job results before starting another, and recheck stale or unsupported claims. Distinguish what you checked now from handover claims, and carry approvals forward only for the action and destination they covered.
 
-Distinguish what you checked now from what the handover reports. Carry an
-approval forward only for the action and destination it covered.
-
-For a status request, leave jobs and files as they are. Still run a check that
-changes nothing, such as the test the handover cites, and report its result as
-checked now. Give the verified state and next step. For a request to
-resume, take the first unfinished authorized step. Preserve unrelated local
-changes. Ask only when a missing decision blocks progress.
+For a status request, leave jobs and files alone, run a read-only check (such as a cited test), and report it as checked now. Read [visual-explanation](../visual-explanation/SKILL.md) when installed. Lead with verified state and next step, using a compact table (`Handover claim`, `Checked now`, `Status`) for multi-item checks. To resume, take the first unfinished authorized step, keep unrelated local changes, and ask only when a decision blocks progress.
 
 ## Related skills
 
 Use one when its case comes up and it is installed.
 
+- Presenting state drift or multi-item checks cleanly → [visual-explanation](../visual-explanation/SKILL.md)
 - The handover you write when you stop in turn → [sbar](../sbar/SKILL.md)
 - A `DONE.md` in the work tree → [deliver](../deliver/SKILL.md)
 - The work stopped inside a research, design or implementation phase → [research-design-implement](../research-design-implement/SKILL.md)

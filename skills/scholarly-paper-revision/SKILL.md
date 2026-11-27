@@ -1,6 +1,6 @@
 ---
 name: scholarly-paper-revision
-description: "Revise existing scholarly LaTeX papers, surveys, or books for mathematical correctness, clear exposition, consistent notation, and teaching quality, including integration of supplied research sources. Use when the user asks to revise, edit, proofread, tighten or check a paper, a thesis, a survey, a book chapter or another `.tex` manuscript, or to work new sources into one."
+description: "Revise scholarly LaTeX papers, theses, surveys, or book chapters (.tex) for math accuracy, notation consistency, exposition, and source integration."
 ---
 
 # Scholarly Paper Revision

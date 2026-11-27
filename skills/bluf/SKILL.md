@@ -1,6 +1,6 @@
 ---
 name: bluf
-description: Open with what the reader must do or decide, and by when (BLUF, bottom line up front). Use before writing any reply that tells a person where work stands, such as a status update, a report, a summary, or an answer to "where is this at".
+description: Lead status updates, reports, summaries, and "where is this at" replies with what the reader must do or decide and by when (BLUF).
 ---
 
 # Bottom line up front

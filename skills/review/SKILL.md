@@ -9,36 +9,28 @@ Have a fresh subagent review the current changes, then report what it found.
 
 ## Brief the reviewer
 
-Choose a fresh reviewer with [model-router](../model-router/SKILL.md).
-Use the host the user requested. If independent review is unavailable,
-follow model-router's disclosure rule. Give the reviewer:
+Pick a fresh reviewer with [model-router](../model-router/SKILL.md) on the requested host, or disclose unavailability per model-router. Give the reviewer:
 
-- The goal of the change, in the user's words.
-- The comparison base from the request or the project's branch policy.
-  Compare the working tree to its merge base with HEAD and inspect untracked
-  files so the review covers committed and uncommitted changes.
-- The scope: correctness bugs, breaking changes, security problems, and code
-  that is harder to maintain than it needs to be.
-- An instruction to report each finding with its file and line, the concrete
-  input or state that triggers it, and how sure it is.
+- The goal in the user's words.
+- The comparison base from the request or branch policy, comparing the working tree and untracked files to its merge base with HEAD.
+- Scope: correctness bugs, breaking changes, security problems, and needless maintenance complexity.
+- Output: each finding's file and line, concrete triggering input or state, and confidence.
 
-Do not share your own opinion of the change. The reviewer should reach its
-own view. Do not let it edit files.
+Withhold your opinion, and forbid file edits.
 
 ## Check the findings
 
-Read the code behind each finding. Drop findings that the code disproves, and
-say which ones you dropped and why.
+Read the code behind each finding. Drop findings the code disproves, and state which ones you dropped and why.
 
 ## Report
 
-Give the confirmed findings, most severe first. Change nothing until the user
-asks for a fix.
+Read [visual-explanation](../visual-explanation/SKILL.md) when installed. Lead with the verdict and a findings table (`Severity`, `Location`, `Trigger`, `Impact`), most severe first, then one short bullet per dropped finding. If none hold, say so in one sentence. Change nothing until asked.
 
 ## Related skills
 
 Use one when its case comes up and it is installed.
 
+- Picking a table or `diff` for review findings → [visual-explanation](../visual-explanation/SKILL.md)
 - A finding you can reproduce by running the case → [verify-change](../verify-change/SKILL.md)
 - The user asks you to fix a finding about needless complexity → [simplify-change](../simplify-change/SKILL.md)
 - The review goes into a pull request → [write-pr-body](../write-pr-body/SKILL.md)

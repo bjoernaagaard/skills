@@ -1,6 +1,6 @@
 ---
 name: reply-repair
-description: Shape replies so the reader can act on them, and repair a reply the reader could not use. Use when the user says TLDR, says they are confused or that it is too much, repeats a question, asks "what do I do", asks whether anything is left, or types /reply-repair. Stays on for the rest of the session.
+description: Shape actionable replies and repair failed ones when the user says TLDR, is confused, repeats a question, asks "what do I do" or "is anything left", or types /reply-repair. Stays on.
 ---
 
 # Replies the reader can act on

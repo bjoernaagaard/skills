@@ -1,6 +1,6 @@
 ---
 name: issue-tree
-description: Splits a question into an issue tree of causes, parts or options, and audits the tree for gaps and overlaps. Use when the user asks why something happened and several causes are possible, what a goal requires, or how a goal could be reached, and when they ask for a breakdown, a decomposition, a hypothesis tree, a driver tree, a set of options to choose from or a MECE check, even if they never say "issue tree". Not for a list of GitHub issues, a file tree, a call tree, or a problem with one obvious cause.
+description: Split a multi-cause why question, goal breakdown, driver tree, or option set into a MECE issue tree and audit for gaps and overlaps. Not for GitHub issue lists, file or call trees, or single-cause bugs.
 ---
 
 # Issue trees

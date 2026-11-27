@@ -1,6 +1,6 @@
 ---
 name: research-design-implement
-description: Investigate how a codebase or system works with sourced evidence and stop at findings, or run and resume scoping questions, design discussion, PRD, technical design, implementation outline, and implementation phases. Use when the user asks for "research only", a codebase or system investigation, a design discussion, a PRD, a technical design, an outline, or a phased change. Skip for routine edits and simple path or symbol lookups, answering directly or suggesting /where when installed. Route general handover recovery to session-pickup.
+description: Run or resume research-only codebase investigations, scoping questions, design discussions, PRDs, technical designs, outlines, or phased implementations with sourced evidence and default visuals. Skip routine edits and simple lookups (or suggest /where).
 ---
 
 # Research, design and implement

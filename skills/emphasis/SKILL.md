@@ -1,6 +1,6 @@
 ---
 name: emphasis
-description: Make replies easy to scan with bold status badges, evidence beside each claim, and the action each badge calls for. Use before writing any reply that reports on work, such as a result, a status, a failure or a finished task, and when the user asks for emphasis, status badges, or scannable replies, or types /emphasis. Works with plain Markdown, so it needs no hook, plugin, or special font. Stays on for the rest of the session.
+description: Format work-status replies with plain-Markdown bold status badges, evidence beside each claim, and next actions. Use for status reports, failures, finished tasks, or /emphasis. Stays on for the session.
 ---
 
 # Emphasis

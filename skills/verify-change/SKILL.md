@@ -1,6 +1,6 @@
 ---
 name: verify-change
-description: Prove a change by running it, choose a test that is hard to fool, and keep checks honest. Use before you say a change works, before a commit or a pull request, when a test fails or fails only some of the time, when you are about to write a test, when the user asks for a reusable verifier for a project, or when the user says "verify", "prove it" or types /verify-change. Stays on for the rest of the session.
+description: Prove a change by running the real app or command, choose hard-to-fool tests, fix flaky checks, or build a reusable project verifier. Use before claiming done, committing, or on /verify-change. Stays on.
 ---
 
 # Proof that a change works

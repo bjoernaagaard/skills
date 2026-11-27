@@ -1,6 +1,6 @@
 ---
 name: visual-explanation
-description: Explain how a system, change, trend, or tradeoff works using the smallest useful visual, such as a diff, table, tree, pseudocode, Mermaid diagram, or inline HTML chart in T3 Code. Use proactively when a visual makes a relationship or comparison clearer, even when the user does not ask for a diagram. Skip for a simple single lookup. Skip live web UI inspection or suggest /explain-interface when installed.
+description: Explain a system, change, trend, or tradeoff using the smallest visual (table, tree, diff, pseudocode, Mermaid diagram, or T3 Code HTML chart). Use proactively even unasked. Skip single lookups and live CSS inspection (/explain-interface).
 ---
 
 # Visual explanation
@@ -33,7 +33,15 @@ Skip visuals for a single lookup or simple fact, and answer in one sentence inst
 
 ## Example
 
-Example build times of 18, 72, and 24 seconds for commits A, B, and C answer "Which commit slowed the build?" with a small chart and the takeaway "72 seconds on commit B." Without HTML tools, show the three labeled pairs in Markdown. "How long did commit B take?" earns one sentence. With math rendering off, "72 is four times 18" states the ratio.
+Takeaway for "Which commit slowed the build?" (example data): commit B jumped to **72 s**, four times commit A. In T3 Code, render an inline HTML bar chart; without HTML tools, show the labeled table:
+
+| Commit | Build time (example) | Change vs. A |
+| --- | --- | --- |
+| A | 18 s | Baseline |
+| B | 72 s | 4x slower |
+| C | 24 s | +33% |
+
+By contrast, "How long did commit B take?" gets one sentence ("Commit B took 72 seconds.") with no visual.
 
 ## Related skills
 

@@ -1,6 +1,6 @@
 ---
 name: setup-bstack
-description: Configure approved delegate models and quota fallbacks in T3 Code, and pick the model for a delegate or a workflow agent. Use when the user asks to set up bstack, before a `delegate_task` or a T3 workflow `agent` step on a machine that has a bstack profile, and when a delegate stops on a usage or quota limit.
+description: Configure bstack delegate models and quota fallbacks in T3 Code, pick targets before delegate_task or workflow agent steps, and recover when a delegate hits a quota limit.
 ---
 
 ## Configure once per machine
