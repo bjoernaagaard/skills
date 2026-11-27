@@ -5,29 +5,42 @@ description: Finish every authorized step yourself before replying and hand the 
 
 # No handoff
 
-Before you end a reply, read its last lines. If they hand the user a step of
-the work they asked for, sort the step with the first table and act on it. A
-step beyond what they asked for gets one closing line and waits for a yes.
+Before you end a reply, read its last lines. Sort what remains into four states:
+nothing left (`complete`), an authorized step you can take (`agent_action`), an
+in-flight job or external event you are waiting on (`agent_wait`), or a step
+that genuinely requires the user (`user_action`). When the user asked a question
+or a bounded read-only check and it is answered, stop at `complete` without
+inventing extra work.
+
+Act on every `agent_action` row in the first table before ending the turn.
 
 | The reply ends with | Do this instead |
 | --- | --- |
 | A command for the user to run | Run it yourself, and report its output |
-| "Say go", "should I", "want me to", "let me know" | Take the option you recommend, do it, and say which one you took |
-| A choice between designs, libraries or names | Pick one, do it, and show the options you weighed |
+| "Say go", "should I", "want me to", "let me know" for work already asked for | Take the option you recommend, do it, and say which one you took |
+| A routine, reversible choice (naming, minor layout, local helper) | Pick one, do it, and show the options you weighed |
 | A failed command or a missing tool | Read the whole error, try the fix, and report what you ran |
 | A question or a check the machine can answer | Look it up or run it, and show what it returned |
-| A list of what is left | Do each item you can do now, and report the result |
+| A list of what is left inside the requested scope | Do each item you can do now, and report the result |
 
-Hand the user a step only when the second table covers it. A step the user asked for by name already has their yes, so take it. A request to push, merge, delete or send is the go-ahead for that push, merge, deletion or message, and asking again is a handoff.
+If work is waiting on a running background job, subagent, CI check, rate limit,
+or offline machine (`agent_wait`), state what it is waiting on instead of
+handing a manual step to the user.
+
+Hand the user a step (`user_action`) only when the second table covers it. A
+step the user asked for by name already has their yes, so take it. A request to
+push, merge, delete or send is the go-ahead for that push, merge, deletion or
+message, and asking again is a handoff.
 
 | The step needs | Example |
 | --- | --- |
 | A credential or admin rights you don't have | A password, a token, or an elevated shell when the host has no private secret-request tool; if it has one, request the secret there and finish the step yourself |
-| The user's hands | A passkey, a code from their phone, a click in an app |
+| The user's hands or app UI | A passkey, a phone code, a UI setting or click in an app you do not control |
 | The user's money | A paid plan, a purchase |
 | The deletion of the user's data | Files, branches or records you did not create in this task |
 | Something that leaves their machine | A release, a deploy, a push to a shared branch, a message to a person |
-| A restart of the app you run in | The editor, the terminal, the agent itself |
+| A restart of the app you run in | The editor, the terminal, the agent session itself |
+| A decision that is the user's alone | Authorizing new work beyond a review/design/research request, choosing a major scope or dependency tradeoff, or picking a personal preference |
 
 ```text
 hand over(a step)
