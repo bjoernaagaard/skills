@@ -1,6 +1,6 @@
 ---
 name: research-design-implement
-description: Run or resume research-only codebase investigations, scoping questions, design discussions, PRDs, technical designs, outlines, or phased implementations with sourced evidence and default visuals. Skip routine edits and simple lookups (or suggest /where).
+description: Run or resume research-only codebase investigations, scoping questions, design discussions, PRDs, technical designs, outlines, or phased implementations with sourced evidence and default visuals. Skip routine edits and simple lookups.
 ---
 
 # Research, design and implement
@@ -27,7 +27,7 @@ Read [visual-explanation](../visual-explanation/SKILL.md) when installed. Lead e
 
 Keep the goal, paths and revisions, settled choices, open decisions, and observed checks in the existing artifact or workflow state, else in the reply. Create a new artifact only when requested.
 
-On resume, confirm the phase and record before advancing, recheck stale evidence against the current revision, and reopen settled choices only on new evidence. Route interrupted session recovery to [session-pickup](../session-pickup/SKILL.md), and answer simple lookups directly or suggest `/where`.
+On resume, confirm the phase and record before advancing, recheck stale evidence against the current revision, and reopen settled choices only on new evidence. Route interrupted session recovery to [session-pickup](../session-pickup/SKILL.md), and answer simple lookups directly.
 
 ## Ownership, permissions, and tests
 

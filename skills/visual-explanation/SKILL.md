@@ -1,6 +1,6 @@
 ---
 name: visual-explanation
-description: Explain a system, change, trend, or tradeoff using the smallest visual (table, tree, diff, pseudocode, Mermaid diagram, or inline HTML chart). Use proactively even unasked. Skip single lookups and live CSS inspection (/explain-interface).
+description: Explain a system, change, trend, or tradeoff using the smallest visual (table, tree, diff, pseudocode, Mermaid diagram, or inline HTML chart). Use proactively even unasked. Skip single lookups and live CSS inspection.
 ---
 
 # Visual explanation
@@ -29,7 +29,7 @@ Skip visuals for a single lookup or simple fact, and answer in one sentence inst
 - **Check the receipt.** Check the render tool's receipt. Report the preview or the receipt only when one shows a problem. They show what was sent, not what the reader's client displays.
 - **Fallbacks.** If inline HTML rendering is unavailable, disabled, or fails, report the tool limit and present the labeled values or relationship in Markdown instead of stalling or working around tool permissions. When math rendering is off, write an essential formula in plain words.
 - **Other requested surfaces.** When the user asks for an image to post, send, or use elsewhere, write a `.png` file and return its path instead of rendering inline HTML. When the user names another surface, use it within task scope.
-- **Scope and routing.** An explanation request authorizes inline delivery in the current thread. Controlling a browser or device, writing files to disk, or sharing externally each requires matching task scope. Skip inspection of how a live web interface or CSS effect was built, or suggest `/explain-interface` when installed.
+- **Scope and routing.** An explanation request authorizes inline delivery in the current thread. Controlling a browser or device, writing files to disk, or sharing externally each requires matching task scope. Skip inspection of how a live web interface or CSS effect was built.
 
 ## Example
 
