@@ -22,7 +22,7 @@ Stay within authorized resources. Finish the requested outcome, not the first sp
 
 Preserve starting code and capture a baseline first where possible. Label missing evidence and naive baselines. Inspect a competent comparator when it informs the decision, explain material differences in behavior, scale, and resources, and avoid building one without clear decision value. Treat published numbers as context, not controlled comparisons.
 
-Inspect necessary work, repetition, allocation, copying, and scaling before local tuning, and consider eliminating work, reuse, algorithms, data layout, and existing libraries. Estimate the hardware ceiling (CPU, memory bandwidth, GPU, I/O) and check for runtime or container caps leaving capacity idle. Separate explanations for large gaps or implausible numbers with profiling or focused experiments, because a hotspot alone does not prove a cause. Label hypotheses, estimates, and bounds.
+Inspect necessary work, repetition, allocation, copying, and scaling before local tuning, and consider eliminating work, reuse, algorithms, data layout, and existing libraries. Estimate the available hardware ceiling (CPU, memory, GPU, I/O) and check for runtime or container caps leaving capacity idle. Separate explanations for large gaps or implausible numbers with profiling or focused experiments, because a hotspot alone does not prove a cause. Label hypotheses, estimates, and bounds.
 
 Read [measurement and evidence](references/MEASUREMENT.md) before running or changing benchmarks, or when auditing measurement validity. For a source-only review, load it only when a measurement question needs it.
 
